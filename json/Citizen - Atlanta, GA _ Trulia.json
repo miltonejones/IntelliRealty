@@ -1,0 +1,26 @@
+{
+    "title": "Citizen",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/citizen-665-auburn-ave-ne-atlanta-ga-30312-2708857365",
+    "address": "665 Auburn Ave NE, Atlanta, GA 30312",
+    "description": "Citizen is an apartment building located at 665 Auburn Ave NE, Atlanta, GA 30312. It offers various floor plans and pricing options. The building has studio apartments and 1-bedroom apartments available. Amenities include outdoor space and parking (contact manager for details). Utilities are not included (contact manager for details). Pets are not allowed. The office hours are Monday to Friday, 9:00am to 6:00pm, and Saturday, 10:00am to 5:00pm.",
+    "bedroomCount": 1,
+    "sizeInMeters": 482,
+    "importantInformation": {
+        "viewings": "Contact manager for viewings",
+        "externalStorage": "Unknown",
+        "garage": "Unknown",
+        "deliveryDate": "Unknown"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,847 - $1,897",
+        "securityDeposit": "Unknown",
+        "rentalAgreement": "Unknown",
+        "availableSince": "Unknown",
+        "status": "Unknown",
+        "acceptance": "Unknown"
+    },
+    "neighbourhood": "Unknown",
+    "lat": 33.7551368,
+    "lon": -84.36575649999999
+}

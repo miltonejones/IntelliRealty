@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for Rent",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42141524-hellingbaan-262/",
+    "address": "Hellingbaan 262, 1033 DB Amsterdam",
+    "description": "AVAILABLE IMMEDIATELY! Sign up to participate in the first round of allocation between June 15, 12:00 and June 22, 12:00! See the housing seeker on account.southdock.nl/aanbod for all available properties. Start your rental application now on the project website SOUTHDOCK.NL.",
+    "bedroomCount": 1,
+    "sizeInMeters": 63,
+    "importantInformation": {
+        "viewings": "By appointment",
+        "externalStorage": "Not specified",
+        "garage": "Not specified",
+        "deliveryDate": "To be determined"
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac 1,795 per month (no service costs)",
+        "securityDeposit": "\u20ac 3,590 one-time",
+        "rentalAgreement": "Indefinite",
+        "availableSince": "6 weeks",
+        "status": "Available",
+        "acceptance": "To be determined"
+    },
+    "neighbourhood": "Noordelijk IJ-oevers West, Amsterdam",
+    "lat": 52.4022231,
+    "lon": 4.8909386
+}

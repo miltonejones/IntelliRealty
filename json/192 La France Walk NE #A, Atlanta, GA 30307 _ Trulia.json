@@ -1,0 +1,26 @@
+{
+    "title": "192 La France Walk NE #A",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/p/ga/atlanta/192-la-france-walk-ne-a-atlanta-ga-30307--2585953533",
+    "address": "192 La France Walk NE #A, Atlanta, GA 30307",
+    "description": "1 bedroom, 1 bathroom apartment located in Edgewood, Atlanta. Pet friendly.",
+    "bedroomCount": 1,
+    "sizeInMeters": null,
+    "importantInformation": {
+        "viewings": "Contact manager",
+        "externalStorage": null,
+        "garage": null,
+        "deliveryDate": null
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,700/month",
+        "securityDeposit": null,
+        "rentalAgreement": null,
+        "availableSince": "Jul 13, 2023",
+        "status": null,
+        "acceptance": null
+    },
+    "neighbourhood": "Edgewood",
+    "lat": 33.7588655,
+    "lon": -84.34303159999999
+}

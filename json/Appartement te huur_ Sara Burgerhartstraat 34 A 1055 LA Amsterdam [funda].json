@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for rent",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-88643540-sara-burgerhartstraat-34-a/",
+    "address": "Sara Burgerhartstraat 34 A, 1055 LA Amsterdam",
+    "description": "Spacious apartment available for rent in Amsterdam",
+    "bedroomCount": 0,
+    "sizeInMeters": 0,
+    "importantInformation": {
+        "viewings": "Viewings available upon request",
+        "externalStorage": "No external storage available",
+        "garage": "No garage available",
+        "deliveryDate": "Available from 1st October 2023"
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,800 per month (no service costs)",
+        "securityDeposit": "\u20ac3,600 one-time payment",
+        "rentalAgreement": "Temporary rental agreement",
+        "availableSince": "Available since 20th July 2023",
+        "status": "Available",
+        "acceptance": "Available for acceptance"
+    },
+    "neighbourhood": "Landlust, Amsterdam",
+    "lat": 52.38281449999999,
+    "lon": 4.8492396
+}

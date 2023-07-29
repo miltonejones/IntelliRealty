@@ -1,0 +1,26 @@
+{
+    "title": "MAA Centennial Park",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/maa-centennial-park-305-centennial-olympic-park-dr-nw-atlanta-ga-30313-2360891",
+    "address": "305 Centennial Olympic Park Dr NW, Atlanta, GA 30313",
+    "description": "MAA Centennial Park is an apartment community located in Atlanta, GA. The property offers various floorplans including 1 bedroom and 2 bedroom units. The apartments feature traditional designs with sizes ranging from 718 sqft to 1,196 sqft. The community is pet-friendly and offers amenities such as external storage and garage parking. The property is conveniently located near Centennial Olympic Park and is within close proximity to other rental options in the area.",
+    "bedroomCount": 1,
+    "sizeInMeters": 66.96,
+    "importantInformation": {
+        "viewings": "Contact Zillow, Inc Brokerage for viewings",
+        "externalStorage": "Available",
+        "garage": "Available",
+        "deliveryDate": "N/A"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,640/mo",
+        "securityDeposit": "N/A",
+        "rentalAgreement": "Contact Zillow, Inc Brokerage for rental agreement",
+        "availableSince": "New listing",
+        "status": "Available",
+        "acceptance": "Contact Zillow, Inc Brokerage for acceptance"
+    },
+    "neighbourhood": "Centennial Park",
+    "lat": 33.7630612,
+    "lon": -84.3912352
+}

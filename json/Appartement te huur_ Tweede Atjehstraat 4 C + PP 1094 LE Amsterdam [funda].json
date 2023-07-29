@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for Rent: Tweede Atjehstraat 4 C + PP",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42273390-tweede-atjehstraat-4-c-pp/",
+    "address": "Tweede Atjehstraat 4 C, 1094 LE Amsterdam",
+    "description": "Spacious apartment for rent in the Indische Buurt West neighborhood of Amsterdam. The apartment has a modern design with ample natural light. It features [insert specific features mentioned in the listing].",
+    "bedroomCount": 0,
+    "sizeInMeters": 0,
+    "importantInformation": {
+        "viewings": "Contact the property owner for viewing arrangements.",
+        "externalStorage": "Not specified.",
+        "garage": "Not specified.",
+        "deliveryDate": "Available for occupation from September 15, 2023."
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac2,000 per month (including service costs of \u20ac50.00/month).",
+        "securityDeposit": "\u20ac2,000 one-time payment.",
+        "rentalAgreement": "Open-ended.",
+        "availableSince": "2 weeks ago.",
+        "status": "Available",
+        "acceptance": "Contact the property owner for further details."
+    },
+    "neighbourhood": "Indische Buurt West, Amsterdam",
+    "lat": 52.361701,
+    "lon": 4.932515599999999
+}

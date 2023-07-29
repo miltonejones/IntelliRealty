@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for rent",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42289672-trompenburgstraat-125-iv/",
+    "address": "Trompenburgstraat 125 IV, 1079 TV Amsterdam",
+    "description": "Spacious apartment for rent in Amsterdam",
+    "bedroomCount": 2,
+    "sizeInMeters": 80,
+    "importantInformation": {
+        "viewings": "By appointment only",
+        "externalStorage": "Not available",
+        "garage": "Not available",
+        "deliveryDate": "Available from 31-08-2023"
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,450 per month (service costs unknown)",
+        "securityDeposit": "\u20ac2,900 one-time",
+        "rentalAgreement": "Indefinite",
+        "availableSince": "20 July 2023",
+        "status": "Available",
+        "acceptance": "Available from 31-08-2023"
+    },
+    "neighbourhood": "Rijnbuurt, Amsterdam",
+    "lat": 52.3438285,
+    "lon": 4.9065485
+}

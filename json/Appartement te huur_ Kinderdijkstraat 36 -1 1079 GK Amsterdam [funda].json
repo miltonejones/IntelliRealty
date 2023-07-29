@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for Rent",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42281895-kinderdijkstraat-36-1/",
+    "address": "Kinderdijkstraat 36 -1, 1079 GK Amsterdam",
+    "description": "This apartment is located in the Scheldebuurt neighborhood of Amsterdam. It has an unspecified number of bedrooms and a size of unspecified square meters. The apartment is available for rent with no service costs. The rental agreement is for an indefinite period. The apartment has been available since July 21, 2023, and is ready for immediate occupancy. Additional features and information about the property can be found on the provided URL.",
+    "bedroomCount": null,
+    "sizeInMeters": null,
+    "importantInformation": {
+        "viewings": "Viewings can be scheduled by contacting the property owner/manager.",
+        "externalStorage": "There is no information available about external storage.",
+        "garage": "There is no information available about a garage.",
+        "deliveryDate": "There is no information available about a delivery date."
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,950 per month",
+        "securityDeposit": "\u20ac3,900 one-time",
+        "rentalAgreement": "The rental agreement is for an indefinite period.",
+        "availableSince": "Available since July 21, 2023",
+        "status": "Available",
+        "acceptance": "Immediate availability"
+    },
+    "neighbourhood": "Scheldebuurt, Amsterdam",
+    "lat": 52.3431273,
+    "lon": 4.9028715
+}

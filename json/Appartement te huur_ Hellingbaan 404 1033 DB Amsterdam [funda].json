@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for Rent",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42141515-hellingbaan-404/",
+    "address": "Hellingbaan 404, 1033 DB Amsterdam",
+    "description": "AVAILABLE IMMEDIATELY! Register to participate in the first round of allocation between June 15th 12:00 and June 22nd 12:00! See the housing seeker at account.southdock.nl/aanbod for all available homes. Start your rental application now on the project website SOUTHDOCK.NL.",
+    "bedroomCount": 1,
+    "sizeInMeters": 72,
+    "importantInformation": {
+        "viewings": "Register to participate in the first round of allocation.",
+        "externalStorage": "Not specified",
+        "garage": "Not specified",
+        "deliveryDate": "Not specified"
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,800 per month (excluding service costs of \u20ac72.60/month)",
+        "securityDeposit": "\u20ac3,600 one-time",
+        "rentalAgreement": "Indefinite",
+        "availableSince": "6 weeks",
+        "status": "Available",
+        "acceptance": "Immediately available"
+    },
+    "neighbourhood": "Northern IJ-oevers West, Amsterdam",
+    "lat": 52.4022255,
+    "lon": 4.8909509
+}

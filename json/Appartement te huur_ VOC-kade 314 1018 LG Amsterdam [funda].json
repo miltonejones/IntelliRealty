@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for Rent: VOC-kade 314",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-88612590-voc-kade-314/",
+    "address": "VOC-kade 314, 1018 LG Amsterdam",
+    "description": "Large living room with open kitchen. Kitchen includes built-in appliances. Beautiful view over the water. Shared roof garden with beautiful views over Amsterdam.",
+    "bedroomCount": 1,
+    "sizeInMeters": 71,
+    "importantInformation": {
+        "viewings": "Viewings are unfortunately not possible for this new construction project; You rent from floor plans and impressions.",
+        "externalStorage": "There is no separate external storage room at the house.",
+        "garage": "There is no garage in the residential project. If you want to park a car, you have to arrange a parking space yourself.",
+        "deliveryDate": "Apartments will be delivered this July."
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,975 per month (service costs unknown)",
+        "securityDeposit": "\u20ac2,050 one-time",
+        "rentalAgreement": "Indefinite period",
+        "availableSince": "5 weeks",
+        "status": "Available",
+        "acceptance": "In consultation"
+    },
+    "neighbourhood": "Oostelijk Eilanden/Kadijken, Amsterdam",
+    "lat": 52.3731139,
+    "lon": 4.9276326
+}
