@@ -5,8 +5,7 @@ import streamlit as st
 from langchain.document_loaders import PyPDFLoader 
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS 
-from geocode import get_lat_lon_from_address 
-from extract import extract_images_from_pdf
+from geocode import get_lat_lon_from_address  
 
 def convert_file_name(file_name): 
   file_name = file_name.split(".")[0] 
