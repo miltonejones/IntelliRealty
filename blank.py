@@ -51,7 +51,7 @@ def blank_page():
     })
 
 
-    tab1, tab2 = st.tabs([f':page_facing_up: **{truncate_string(obj["address"])}**', f"All {st.session_state.city} listings" ])
+    tab1, tab2 = st.tabs([f':page_facing_up: {truncate_string(obj["address"])}', f"All {st.session_state.city} listings" ])
 
     with tab2: 
       st.map(dots)
