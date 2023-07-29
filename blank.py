@@ -27,8 +27,31 @@ def delete_pdf_and_json_files(filename):
 
   st.experimental_rerun()
  
+def edit_form(filename):  
 
+  basename = os.path.splitext(os.path.basename(filename))[0]
+  # Define the paths to the PDF and JSON files based on the filename 
+  json_file = os.path.join('json', basename + '.json')
 
+  # Load JSON data
+  with open(json_file) as f:
+    data = json.load(f)
+
+  # Create form  
+  st.markdown("**Edit Apartment Listing**")
+  title = st.text_input("Title", data["title"])  
+  url = st.text_input("URL", data["url"])
+
+  # Save data on form submit
+  if st.button("Save"):
+    data["title"] = title
+    data["url"] = url
+    with open(json_file, 'w') as f:
+      json.dump(data, f, indent=4)
+        
+    st.success("Saved!")
+
+# st.session_state.pdf_file
 def blank_page(): 
   try:
     obj = json.loads(st.session_state.selected_desc) 
@@ -53,32 +76,38 @@ def blank_page():
 
     tab1, tab2 = st.tabs([f':page_facing_up: {truncate_string(obj["address"])}', f"All {st.session_state.city} listings" ])
 
-    with tab2: 
-      st.map(dots)
-
     with tab1: 
       col1, col2 = st.columns(2)
       with col1:
         st.map(data)
       with col2:  
-        st.write(obj["address"])
-        st.info(f"""
-{obj["description"]}
+        viewTab, editTab = st.tabs(['View', 'Edit'])
 
-_{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
+        with viewTab:
+          st.write(obj["address"])
+          st.info(f"""
+  {obj["description"]}
 
-> Rent: {obj["rentalDetails"]["rentPrice"]}
+  _{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
 
-> Deposit: {obj["rentalDetails"]["securityDeposit"]}
+  > Rent: {obj["rentalDetails"]["rentPrice"]}
 
-""") 
-        st.markdown(f'[Open Listing]({obj["url"]})')
-        if st.button('Remove Listing'):
-          confirmation = st.radio("Are you sure you want to delete this document?", ("No", "Yes"), index=0)
-          if confirmation == "Yes":
-            delete_pdf_and_json_files(st.session_state.pdf_file)
+  > Deposit: {obj["rentalDetails"]["securityDeposit"]}
+
+  """) 
+          st.markdown(f'[Open Listing]({obj["url"]})')
+          if st.button('Remove Listing'):
+            confirmation = st.radio("Are you sure you want to delete this document?", ("No", "Yes"), index=0)
+            if confirmation == "Yes":
+              delete_pdf_and_json_files(st.session_state.pdf_file)
           
 
+        with editTab: 
+          edit_form(st.session_state.pdf_file)
+
+    with tab2: 
+      st.map(dots)
+ 
 
 
 
