@@ -1,0 +1,26 @@
+{
+    "title": "Station Square",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/station-square-1065-seaboard-ave-ne-atlanta-ga-30307-1001416109",
+    "address": "1065 Seaboard Ave NE, Atlanta, GA 30307",
+    "description": "Apartment community with various floor plans and pricing options. Pets (dogs and cats) are allowed. Parking and outdoor amenities available. Cooling only A/C. Utilities included. Prices and availability subject to change without notice.",
+    "bedroomCount": 2,
+    "sizeInMeters": null,
+    "importantInformation": {
+        "viewings": "Contact manager for viewings",
+        "externalStorage": "Contact manager for availability",
+        "garage": "Contact manager for availability",
+        "deliveryDate": null
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,349",
+        "securityDeposit": null,
+        "rentalAgreement": "Unknown",
+        "availableSince": null,
+        "status": null,
+        "acceptance": null
+    },
+    "neighbourhood": "Station Square",
+    "lat": 33.7569427,
+    "lon": -84.351884
+}

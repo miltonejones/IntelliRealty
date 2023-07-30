@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
-from geocode import construct_folium_singleton_map, construct_folium_map, get_lat_lon_from_address, construct_dataframe_with_selected
+from geocode import construct_folium_map, get_lat_lon_from_address
 from util import truncate_string 
 import os
 from streamlit_folium import st_folium
@@ -91,9 +91,7 @@ _{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
 """) 
         st.markdown(f'[Open Listing]({obj["url"]})')
         if st.button('Remove Listing'):
-          confirmation = st.radio("Are you sure you want to delete this document?", ("No", "Yes"), index=0)
-          if confirmation == "Yes":
-            delete_pdf_and_json_files(st.session_state.pdf_file)
+          delete_pdf_and_json_files(st.session_state.pdf_file)
         
 
       with editTab: 

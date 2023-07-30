@@ -1,0 +1,26 @@
+{
+    "title": "Modera Reynoldstown",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/modera-reynoldstown-780-memorial-dr-se-atlanta-ga-30316-2092101600",
+    "address": "780 Memorial Dr SE, Atlanta, GA 30316",
+    "description": "Modera Reynoldstown offers modern apartments with a variety of floorplans and sizes. The community features a pool, outdoor patio, and pet-friendly policies. The apartments include amenities such as air conditioning and on-site parking. Office hours are from 10:00am to 6:00pm on weekdays and 10:00am to 5:00pm on Saturdays.",
+    "bedroomCount": 2,
+    "sizeInMeters": 104.79,
+    "importantInformation": {
+        "viewings": "Contact the property manager to schedule viewings.",
+        "externalStorage": "Unknown",
+        "garage": "Unknown",
+        "deliveryDate": "Unknown"
+    },
+    "rentalDetails": {
+        "rentPrice": "$2,329",
+        "securityDeposit": "Unknown",
+        "rentalAgreement": "Unknown",
+        "availableSince": "Unknown",
+        "status": "Unknown",
+        "acceptance": "Unknown"
+    },
+    "neighbourhood": "Reynoldstown",
+    "lat": 33.7476412,
+    "lon": -84.3618609
+}
