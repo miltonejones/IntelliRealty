@@ -33,6 +33,10 @@ def render_sidebar():
     # st.caption("Apartment Search Chatbot") 
     
     source_docs = get_document_list(st.session_state.city)
+    
+
+    st.session_state.source_docs = source_docs
+
 
     # Display radio buttons and handle document selection
     selected_option = st.radio('Listing:', 
@@ -43,7 +47,7 @@ def render_sidebar():
  
     # Update session variable on button selection
     if selected_option:
-      st.session_state.pdf_file = source_docs[selected_option]
+      st.session_state.pdf_file = source_docs[selected_option]["path"]
       st.session_state.selected_option = selected_option  
 
     with st.expander(":gear: Settings"):
@@ -61,6 +65,7 @@ def render_sidebar():
         # Save the uploaded file and display a success message
         file_path = save_uploaded_file(uploaded_file)
         st.success(f"File saved successfully: {file_path}")  
+     #   st.experimental_rerun()
 
  
 
@@ -72,6 +77,8 @@ def main():
   
   # set initial session values
   initialize_session() 
+
+  
 
   # draw page side bar
   render_sidebar()

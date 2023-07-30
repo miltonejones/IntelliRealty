@@ -22,5 +22,6 @@
     },
     "neighbourhood": "Unknown",
     "lat": 33.7737368,
-    "lon": -84.38125509999999
+    "lon": -84.38125509999999,
+    "favorite": true
 }

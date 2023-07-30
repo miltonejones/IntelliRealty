@@ -1,11 +1,40 @@
 import streamlit as st
 import pandas as pd
 import json
+import os
 from geocode import construct_folium_map, get_lat_lon_from_address
 from util import truncate_string 
-import os
+from notes import listing_notes, read_json, write_json
 from streamlit_folium import st_folium
 
+def get_json_filename():
+  filename = st.session_state.pdf_file
+  basename = os.path.splitext(os.path.basename(filename))[0] 
+  return os.path.join('json', basename + '.json')
+
+def favorite_button():
+  json_path = get_json_filename()
+  data = read_json(json_path)
+ 
+  if "favorite" not in data:
+    data["favorite"] = False
+
+  if data["favorite"]:
+    btn_text = "❤️ Remove from Favorites"
+  else:
+    btn_text = "🖤 Add to Favorites"
+    
+  if st.button(btn_text):
+    data["favorite"] = not data["favorite"] 
+    print(data)
+    write_json(data, json_path)
+    st.experimental_rerun()
+    if data["favorite"]:
+      st.success("Added to Favorites ⭐")
+    else:
+      st.success("Removed from Favorites ⭐")
+
+    # 
 
 def delete_pdf_and_json_files(filename):
   basename = os.path.splitext(os.path.basename(filename))[0]
@@ -28,8 +57,8 @@ def delete_pdf_and_json_files(filename):
 
   st.experimental_rerun()
  
-def edit_form(filename):  
 
+def property_edit_form(filename):  
   basename = os.path.splitext(os.path.basename(filename))[0]
   # Define the paths to the PDF and JSON files based on the filename 
   json_file = os.path.join('json', basename + '.json')
@@ -40,67 +69,72 @@ def edit_form(filename):
 
   # Create form  
   st.markdown("**Edit Apartment Listing**")
-  title = st.text_input("Title", json_data["title"])  
-  url = st.text_input("URL", json_data["url"])
+  title = st.text_input("Title", json_data["title"])
+  url = st.text_input("URL", json_data["url"]) 
+  description = st.text_area("Description", json_data["description"])
+  bedrooms = st.text_input("Bedrooms",  json_data["bedroomCount"])  
+  size = st.text_input("Size (sqm)", json_data["sizeInMeters"])
+
 
   # Save json_data on form submit
   if st.button("Save"):
-    json_data["title"] = title
+
+    json_data["title"] = title 
     json_data["url"] = url
+    json_data["description"] = description 
+    json_data["bedroomCount"] = bedrooms
+    json_data["sizeInMeters"] = size
+
     with open(json_file, 'w') as f:
       json.dump(json_data, f, indent=4)
         
     st.success("Saved!")
 
-# st.session_state.pdf_file
+
+def property_view_panel():
+  obj = json.loads(st.session_state.selected_desc) 
+  st.info(f"""
+    {obj["description"]}
+
+    > _{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
+
+    > Rent: {obj["rentalDetails"]["rentPrice"]}
+
+    > Deposit: {obj["rentalDetails"]["securityDeposit"]}
+
+    """) 
+  
+  st.markdown(f'↗️ [Open Listing]({obj["url"]})')
+  if st.button('Remove Listing'):
+    delete_pdf_and_json_files(st.session_state.pdf_file)
+
+
+ 
+
+    
+
 def blank_page(): 
   try:
     obj = json.loads(st.session_state.selected_desc) 
-    info = get_lat_lon_from_address(obj["address"] + " " + obj["city"] + ", NL")
-    
-
-    
-    # selected_city = st.radio('City:',
-    #                          ['Amsterdam', 'Atlanta'],
-    #                          key="mode",
-    #                          horizontal=True)
-
-
-    # tab1, tab2 = st.tabs([f':page_facing_up: {truncate_string(obj["address"])}', f"All {st.session_state.city} listings" ])
-
-    st.write(obj["address"])
-    # with tab1: 
+    info = get_lat_lon_from_address(obj["address"] + " " + obj["city"] ) 
+ 
     col1, col2 = st.columns(2)
+
     with col1: 
+      st.write(obj["address"])
       construct_folium_map(info["lat"], info["lon"], st.session_state.city)
+      favorite_button()
 
     with col2:  
       viewTab, editTab = st.tabs(['View', 'Edit'])
 
-      with viewTab:
-        # st.write(obj["address"])
-        st.info(f"""
-{obj["description"]}
-
-_{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
-
-> Rent: {obj["rentalDetails"]["rentPrice"]}
-
-> Deposit: {obj["rentalDetails"]["securityDeposit"]}
-
-""") 
-        st.markdown(f'[Open Listing]({obj["url"]})')
-        if st.button('Remove Listing'):
-          delete_pdf_and_json_files(st.session_state.pdf_file)
-        
+      with viewTab: 
+        property_view_panel() 
+        "---"
+        listing_notes(st.session_state.pdf_file)
 
       with editTab: 
-        edit_form(st.session_state.pdf_file) 
-
-    # with tab2:  
-    #   construct_folium_map(info["lat"], info["lon"], st.session_state.city) 
-
-
+        property_edit_form(st.session_state.pdf_file)  
 
   except Exception as e:
       st.warning('Could not get coordinates.')

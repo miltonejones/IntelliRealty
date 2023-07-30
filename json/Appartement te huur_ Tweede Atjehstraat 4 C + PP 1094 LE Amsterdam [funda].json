@@ -4,8 +4,8 @@
     "url": "https://www.funda.nl/huur/amsterdam/appartement-42273390-tweede-atjehstraat-4-c-pp/",
     "address": "Tweede Atjehstraat 4 C, 1094 LE Amsterdam",
     "description": "Spacious apartment for rent in the Indische Buurt West neighborhood of Amsterdam. The apartment has a modern design with ample natural light. It features [insert specific features mentioned in the listing].",
-    "bedroomCount": 0,
-    "sizeInMeters": 0,
+    "bedroomCount": "2",
+    "sizeInMeters": "70",
     "importantInformation": {
         "viewings": "Contact the property owner for viewing arrangements.",
         "externalStorage": "Not specified.",

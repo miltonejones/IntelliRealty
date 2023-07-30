@@ -1,0 +1,33 @@
+{
+    "title": "Apartment for rent: Levantplein 8, Amsterdam",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42281824-levantplein-8/",
+    "address": "Levantplein 8, 1019 MK Amsterdam",
+    "description": "Lovely 3-room apartment of approximately 73m2 on the KNSM island!\n\n- Good accessibility, with quick access to the A-10 ring road via the Piet Heijntunnel\n- Close to shopping center Brazili\u00eb and various shops in the Indische buurt\n- 10 minutes by bike to Central Station\n- Tram stops for lines 7 and 26 within walking distance",
+    "bedroomCount": "2",
+    "sizeInMeters": "73",
+    "importantInformation": {
+        "viewings": "Contact the real estate agent to schedule a viewing",
+        "externalStorage": "Not specified",
+        "garage": "Not specified",
+        "deliveryDate": "Not specified"
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,800/month",
+        "securityDeposit": "Not specified",
+        "rentalAgreement": "Not specified",
+        "availableSince": "Not specified",
+        "status": "Not specified",
+        "acceptance": "Not specified"
+    },
+    "neighbourhood": "KNSM-eiland",
+    "lat": 52.37670989999999,
+    "lon": 4.941834099999999,
+    "favorite": true,
+    "notes": [
+        {
+            "date": "2023-07-30 07:12:07",
+            "text": "The architecture is amazing. nice location too"
+        }
+    ]
+}

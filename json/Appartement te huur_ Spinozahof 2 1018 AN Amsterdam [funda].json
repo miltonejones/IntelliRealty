@@ -4,8 +4,8 @@
     "url": "https://www.funda.nl/huur/amsterdam/appartement-42287421-spinozahof-2/",
     "address": "Spinozahof 2, 1018 AN Amsterdam",
     "description": "This apartment is located in the Weesperbuurt/Plantage neighborhood of Amsterdam. It has a monthly rent of \u20ac1,850 (service costs unknown) and requires a security deposit of \u20ac1,500. The rental agreement is for an indefinite period. The apartment has been available since July 18, 2023. The size of the apartment is unknown. Viewings can be arranged by contacting the property agent. The apartment features a bedroom and comes with various amenities such as a garage and external storage. The delivery date is to be determined. The neighborhood offers easy access to schools and supermarkets.",
-    "bedroomCount": 1,
-    "sizeInMeters": 0,
+    "bedroomCount": "2",
+    "sizeInMeters": "71",
     "importantInformation": {
         "viewings": "Viewings can be arranged by contacting the property agent.",
         "externalStorage": "The apartment comes with external storage.",
@@ -22,5 +22,6 @@
     },
     "neighbourhood": "Weesperbuurt/Plantage, Amsterdam",
     "lat": 52.3615023,
-    "lon": 4.912468899999999
+    "lon": 4.912468899999999,
+    "favorite": true
 }

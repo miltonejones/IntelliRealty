@@ -8,15 +8,9 @@ from streamlit_folium import st_folium
 
 def construct_folium_map(selected_lat, selected_lon, town=None):
     folder_path = "./json"
-
-    if town == 'Atlanta':
-        location=[33.7552, -84.3915]
-    else:
-        location=[52.3731081,4.8932945]
-
-    print(location)
-
-    map = folium.Map(location=location, zoom_start=12)
+   
+  
+    map = folium.Map(location=[selected_lat, selected_lon], zoom_start=12)
 
     for filename in os.listdir(folder_path):
         if filename.endswith(".json"):
@@ -26,16 +20,27 @@ def construct_folium_map(selected_lat, selected_lon, town=None):
             lat = json_data["lat"]
             lon = json_data["lon"]
             city = json_data["city"]
-            print(lat,lon)
-            
+           
             color = "red" if selected_lat == lat else "blue" 
 
             if town == city:   
-                folium.Marker([lat,lon], 
-                              popup=json_data["address"],
-                              icon=folium.Icon(color=color),
-                              
-                              ).add_to(map) 
+                if selected_lat == lat:
+                    folium.Marker([lat,lon],  
+                                  popup=json_data["address"],
+                                  tooltip=json_data["address"],
+                                  icon=folium.Icon(color=color), 
+                                  ).add_to(map) 
+                else:
+                    folium.CircleMarker(
+                        location=[lat,lon],
+                        radius=8,
+                        popup=json_data["address"],
+                        tooltip=json_data["address"],
+                        color="#3186cc",
+                        fill=True,
+                        fill_color="#3186cc",
+                    ).add_to(map)
+
 
     st_folium(map, width='100%', height=400) 
  

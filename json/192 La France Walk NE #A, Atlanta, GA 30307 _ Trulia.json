@@ -22,5 +22,6 @@
     },
     "neighbourhood": "Edgewood",
     "lat": 33.7588655,
-    "lon": -84.34303159999999
+    "lon": -84.34303159999999,
+    "favorite": true
 }

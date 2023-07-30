@@ -22,5 +22,12 @@
     },
     "neighbourhood": "Oostelijk Eilanden/Kadijken, Amsterdam",
     "lat": 52.3731139,
-    "lon": 4.9276326
+    "lon": 4.9276326,
+    "favorite": true,
+    "notes": [
+        {
+            "date": "2023-07-30 06:57:09",
+            "text": "big plus for the waterfront view"
+        }
+    ]
 }

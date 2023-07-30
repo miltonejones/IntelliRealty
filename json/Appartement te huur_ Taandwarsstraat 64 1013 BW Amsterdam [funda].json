@@ -1,11 +1,11 @@
 {
-    "title": "Apartment for Rent",
+    "title": "Taandwarsstraat 64",
     "city": "Amsterdam",
     "url": "https://www.funda.nl/huur/amsterdam/appartement-42287420-taandwarsstraat-64/",
     "address": "Taandwarsstraat 64, 1013 BW Amsterdam",
-    "description": "This apartment is located in the Haarlemmerbuurt neighborhood of Amsterdam. It is available for rent and has a monthly rental price of \u20ac1,975 (service costs unknown). The apartment has an unspecified number of bedrooms and a size of unknown square meters. It has various amenities such as a basisschool (elementary school) and a supermarket nearby.",
-    "bedroomCount": null,
-    "sizeInMeters": null,
+    "description": "This apartment is located in the Haarlemmerbuurt neighborhood of Amsterdam. It is available for rent and has a monthly rental price of \u20ac1,975 (service costs unknown). It has various amenities such as a basisschool (elementary school) and a supermarket nearby.",
+    "bedroomCount": "2",
+    "sizeInMeters": "65",
     "importantInformation": {
         "viewings": "Viewings can be scheduled upon request.",
         "externalStorage": "No information available about external storage.",
@@ -22,5 +22,6 @@
     },
     "neighbourhood": "Haarlemmerbuurt, Amsterdam",
     "lat": 52.3879921,
-    "lon": 4.8887459
+    "lon": 4.8887459,
+    "favorite": false
 }

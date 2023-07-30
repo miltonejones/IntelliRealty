@@ -52,18 +52,25 @@ def get_document_list(city):
       normalized_key = convert_file_name(file_name)
       basename = os.path.splitext(os.path.basename(file_name))[0]
       json_path = f'./json/{basename}.json'
-      if (os.path.exists(json_path)):
+
+      if os.path.exists(json_path):
         with open(json_path, 'r') as file:
-          json_data = json.load(file)
-        if city is None or (json_data.get('city') and json_data['city'].lower() == city.lower()): 
-          # Store the file path in the dictionary
-          file_object[normalized_key] = './src/' + file_name
+            json_data = json.load(file)
+
+        if city is None or (json_data.get('city') and json_data['city'].lower() == city.lower()):
+          # Create the object with properties path and favorite
+          file_object[normalized_key] = {
+              'path': './src/' + file_name,
+              'favorite': json_data.get('favorite', False)  # Default to False if 'favorite' key doesn't exist
+          }
       else:
-        file_object[normalized_key] = './src/' + file_name
+        file_object[normalized_key] = {
+            'path': './src/' + file_name,
+            'favorite': False  # Default to False if JSON file doesn't exist
+        }
 
   # Sort the file list alphabetically
-  sorted_files = dict(sorted(file_object.items()))
-
+  sorted_files = dict(sorted(file_object.items())) 
   return sorted_files
  
 
@@ -210,12 +217,15 @@ def initialize_session():
 
 
 def truncate_string(input_string):
+    item = st.session_state.source_docs[input_string]
+    prefix = '❤️ ' if item['favorite'] else ''
+
     # Remove "Appartement te huur" from the string
     input_string = input_string.replace("Appartement te huur", "") 
     input_string = input_string.replace("Amsterdam", "") 
  
     # Truncate the string to the first and last 10 characters
-    truncated_string = input_string[:25] + '...' + input_string[-5:]
+    truncated_string = prefix + input_string[:25] + '...' + input_string[-5:]
 
     return truncated_string
  

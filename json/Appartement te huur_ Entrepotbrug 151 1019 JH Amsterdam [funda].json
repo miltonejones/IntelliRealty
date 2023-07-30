@@ -1,0 +1,26 @@
+{
+    "title": "Apartment for rent",
+    "city": "Amsterdam",
+    "url": "https://www.funda.nl/huur/amsterdam/appartement-42281822-entrepotbrug-151/",
+    "address": "Entrepotbrug 151, 1019 JH Amsterdam",
+    "description": "Spacious apartment with great views\n- Features large bedrooms\n- Ample storage space\n- Garage included\n- Recently renovated\n- Available for immediate move-in",
+    "bedroomCount": 2,
+    "sizeInMeters": 100,
+    "importantInformation": {
+        "viewings": "Viewings can be scheduled upon request.",
+        "externalStorage": "Additional storage space is available.",
+        "garage": "Garage space is included with the apartment.",
+        "deliveryDate": "The apartment is available for immediate move-in."
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac2000 per month",
+        "securityDeposit": "Two months' rent",
+        "rentalAgreement": "A rental agreement will be provided.",
+        "availableSince": "Listed on 30-07-2023",
+        "status": "Available for rent",
+        "acceptance": "Subject to approval"
+    },
+    "neighbourhood": "Nearby amenities include bus stops, shops, and restaurants.",
+    "lat": 52.370638,
+    "lon": 4.9361944
+}
