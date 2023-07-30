@@ -36,7 +36,7 @@ def construct_folium_map(selected_lat, selected_lon, town=None):
                               icon=folium.Icon(color=color)
                               ).add_to(map) 
 
-    st_folium(map, width='100%', height=500) 
+    st_folium(map, width='100%', height=400) 
 
 def construct_folium_singleton_map(selected_lat, selected_lon, town=None): 
 
