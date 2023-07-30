@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 import json
-from geocode import get_lat_lon_from_address, construct_dataframe_with_selected
+from geocode import construct_folium_singleton_map, construct_folium_map, get_lat_lon_from_address, construct_dataframe_with_selected
 from util import truncate_string 
 import os
+from streamlit_folium import st_folium
 
 
 def delete_pdf_and_json_files(filename):
@@ -33,21 +34,21 @@ def edit_form(filename):
   # Define the paths to the PDF and JSON files based on the filename 
   json_file = os.path.join('json', basename + '.json')
 
-  # Load JSON data
+  # Load JSON
   with open(json_file) as f:
-    data = json.load(f)
+    json_data = json.load(f)
 
   # Create form  
   st.markdown("**Edit Apartment Listing**")
-  title = st.text_input("Title", data["title"])  
-  url = st.text_input("URL", data["url"])
+  title = st.text_input("Title", json_data["title"])  
+  url = st.text_input("URL", json_data["url"])
 
-  # Save data on form submit
+  # Save json_data on form submit
   if st.button("Save"):
-    data["title"] = title
-    data["url"] = url
+    json_data["title"] = title
+    json_data["url"] = url
     with open(json_file, 'w') as f:
-      json.dump(data, f, indent=4)
+      json.dump(json_data, f, indent=4)
         
     st.success("Saved!")
 
@@ -56,58 +57,50 @@ def blank_page():
   try:
     obj = json.loads(st.session_state.selected_desc) 
     info = get_lat_lon_from_address(obj["address"] + " " + obj["city"] + ", NL")
-    # print('geocode', info)
-
-    # st.caption(st.session_state.selected_desc)
-
-
-    dots = construct_dataframe_with_selected(info["lat"], info["lon"], st.session_state.city)
     
-    # print('map', dots)
 
-    ## Create a sample DataFrame with latitude and longitude values
-    data = pd.DataFrame({
-        'latitude': [info["lat"]],
-        'longitude': [info["lon"]],
-        'size': 50,
-        'color': '#ff0000'
-    })
+    
+    # selected_city = st.radio('City:',
+    #                          ['Amsterdam', 'Atlanta'],
+    #                          key="mode",
+    #                          horizontal=True)
 
 
-    tab1, tab2 = st.tabs([f':page_facing_up: {truncate_string(obj["address"])}', f"All {st.session_state.city} listings" ])
+    # tab1, tab2 = st.tabs([f':page_facing_up: {truncate_string(obj["address"])}', f"All {st.session_state.city} listings" ])
 
-    with tab1: 
-      col1, col2 = st.columns(2)
-      with col1:
-        st.map(data)
-      with col2:  
-        viewTab, editTab = st.tabs(['View', 'Edit'])
+    st.write(obj["address"])
+    # with tab1: 
+    col1, col2 = st.columns(2)
+    with col1: 
+      construct_folium_map(info["lat"], info["lon"], st.session_state.city)
 
-        with viewTab:
-          st.write(obj["address"])
-          st.info(f"""
-  {obj["description"]}
+    with col2:  
+      viewTab, editTab = st.tabs(['View', 'Edit'])
 
-  _{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
+      with viewTab:
+        # st.write(obj["address"])
+        st.info(f"""
+{obj["description"]}
 
-  > Rent: {obj["rentalDetails"]["rentPrice"]}
+_{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
 
-  > Deposit: {obj["rentalDetails"]["securityDeposit"]}
+> Rent: {obj["rentalDetails"]["rentPrice"]}
 
-  """) 
-          st.markdown(f'[Open Listing]({obj["url"]})')
-          if st.button('Remove Listing'):
-            confirmation = st.radio("Are you sure you want to delete this document?", ("No", "Yes"), index=0)
-            if confirmation == "Yes":
-              delete_pdf_and_json_files(st.session_state.pdf_file)
-          
+> Deposit: {obj["rentalDetails"]["securityDeposit"]}
 
-        with editTab: 
-          edit_form(st.session_state.pdf_file)
+""") 
+        st.markdown(f'[Open Listing]({obj["url"]})')
+        if st.button('Remove Listing'):
+          confirmation = st.radio("Are you sure you want to delete this document?", ("No", "Yes"), index=0)
+          if confirmation == "Yes":
+            delete_pdf_and_json_files(st.session_state.pdf_file)
+        
 
-    with tab2: 
-      st.map(dots)
- 
+      with editTab: 
+        edit_form(st.session_state.pdf_file) 
+
+    # with tab2:  
+    #   construct_folium_map(info["lat"], info["lon"], st.session_state.city) 
 
 
 

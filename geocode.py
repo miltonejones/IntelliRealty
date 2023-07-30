@@ -2,6 +2,57 @@ import requests
 import os  
 import json
 import pandas as pd
+import folium
+from streamlit_folium import st_folium
+
+
+def construct_folium_map(selected_lat, selected_lon, town=None):
+    folder_path = "./json"
+
+    if town == 'Atlanta':
+        location=[33.7552, -84.3915]
+    else:
+        location=[52.3731081,4.8932945]
+
+    print(location)
+
+    map = folium.Map(location=location, zoom_start=12)
+
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".json"):
+            with open(os.path.join(folder_path, filename), "r") as file:
+                json_data = json.load(file)
+
+            lat = json_data["lat"]
+            lon = json_data["lon"]
+            city = json_data["city"]
+            print(lat,lon)
+            
+            color = "red" if selected_lat == lat else "blue"
+
+            if town == city:   
+                folium.Marker([lat,lon], 
+                              popup=json_data["address"],
+                              icon=folium.Icon(color=color)
+                              ).add_to(map) 
+
+    st_folium(map, width='100%', height=500) 
+
+def construct_folium_singleton_map(selected_lat, selected_lon, town=None): 
+
+    if town == 'Atlanta':
+        location=[33.7552, -84.3915]
+    else:
+        location=[52.3731081,4.8932945]
+ 
+
+    map = folium.Map(location=location, zoom_start=12)
+
+    folium.Marker([selected_lat,selected_lon]).add_to(map)
+                
+    st_folium(map, width='100%', height=500) 
+
+    
  
 def construct_dataframe_with_selected(selected_lat, selected_lon, town=None): 
     folder_path = "./json"
@@ -66,53 +117,4 @@ def get_lat_lon_from_address(address):
     except Exception as e:
         print(f"Error: {e}")
         return None
-
-# # Replace "YOUR_GOOGLE_MAPS_API_KEY" with your actual API key
-# api_key = "YOUR_GOOGLE_MAPS_API_KEY"
-# address_to_search = "1600 Amphitheatre Parkway, Mountain View, CA"
-
-# result = get_latitude_longitude(api_key, address_to_search)
-# if result:
-#     latitude, longitude = result
-#     print(f"Latitude: {latitude}, Longitude: {longitude}")
-# else:
-#     print("Could not retrieve latitude and longitude.")
-
-
-
-
-
-# def get_lat_lon_from_address(address):
-#     url = f"https://nominatim.openstreetmap.org/search/{address}?format=json"
-#     response = requests.get(url)
-    
-#     if response.status_code == 200:
-#         data = response.json()
-#         if data:
-#             return {
-#                 "address": address,
-#                 "lat": float(data[0]['lat']),
-#                 "lon": float(data[0]['lon'])
-#             }
-#         else:
-#             print(f"No results found for address: {address}")
-#             return None
-#     else:
-#         print(f"Failed to fetch data for address: {address}")
-#         return None
-
-# # Example usage
-# if __name__ == "__main__":
-#     original_object = {
-#         "name": "Sample Location",
-#         "address": "1600 Amphitheatre Parkway, Mountain View, CA"
-#     }
-
-#     address = original_object["address"]
-#     result = get_lat_lon_from_address(address)
-
-#     if result:
-#         original_object["lat"] = result["lat"]
-#         original_object["lon"] = result["lon"]
-#         print("Updated object:")
-#         print(original_object)
+ 
