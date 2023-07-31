@@ -3,24 +3,35 @@
     "city": "Atlanta",
     "url": "https://www.trulia.com/building/station-square-1065-seaboard-ave-ne-atlanta-ga-30307-1001416109",
     "address": "1065 Seaboard Ave NE, Atlanta, GA 30307",
-    "description": "Apartment community with various floor plans and pricing options. Pets (dogs and cats) are allowed. Parking and outdoor amenities available. Cooling only A/C. Utilities included. Prices and availability subject to change without notice.",
+    "description": "Station Square is a modern apartment complex located in the heart of Atlanta. With its convenient location, residents have easy access to nearby shops, restaurants, and entertainment venues. The apartments offer spacious layouts and modern amenities, including air conditioning and on-site parking. Pets are welcome. The property is located in a neighborhood that provides legal protections for LGBTQ individuals and those with housing vouchers or alternative sources of income.",
     "bedroomCount": 2,
-    "sizeInMeters": null,
+    "bathroomCount": 2,
+    "size": 0,
+    "sizeType": "sqft",
     "importantInformation": {
-        "viewings": "Contact manager for viewings",
-        "externalStorage": "Contact manager for availability",
-        "garage": "Contact manager for availability",
-        "deliveryDate": null
+        "viewings": "Contact the manager for viewing arrangements.",
+        "externalStorage": "Unknown",
+        "garage": "Unknown",
+        "deliveryDate": "Unknown"
     },
     "rentalDetails": {
         "rentPrice": "$1,349",
-        "securityDeposit": null,
+        "securityDeposit": "Unknown",
         "rentalAgreement": "Unknown",
-        "availableSince": null,
-        "status": null,
-        "acceptance": null
+        "availableSince": "Unknown",
+        "status": "Unknown",
+        "acceptance": "Unknown",
+        "rentOptions": [
+            {
+                "size": 0,
+                "bedroomCount": 2,
+                "bathroomCount": 2,
+                "price": "$1,349",
+                "availableWhen": "Unknown"
+            }
+        ]
     },
-    "neighbourhood": "Station Square",
+    "neighbourhood": "Unknown",
     "lat": 33.7569427,
     "lon": -84.351884
 }

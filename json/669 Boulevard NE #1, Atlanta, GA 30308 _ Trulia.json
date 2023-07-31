@@ -3,22 +3,25 @@
     "city": "Atlanta",
     "url": "https://www.trulia.com/p/ga/atlanta/669-boulevard-ne-1-atlanta-ga-30308--2444540134",
     "address": "669 Boulevard NE #1, Atlanta, GA 30308",
-    "description": "This 2 bedroom, 1 bathroom apartment is located in the Old Fourth Ward neighborhood of Atlanta. It has a total size of 1,150 sqft. Some features of this property include A/C cooling, on-site parking, and outdoor space. Utilities are included. Pets are not allowed.",
+    "description": "This 2 bedroom, 1 bathroom apartment is located in the Old Fourth Ward neighborhood of Atlanta. It offers a convenient location with nearby amenities such as shops, restaurants, and parks. The apartment features a spacious layout with a size of 1,150 sqft. It includes important amenities like air conditioning and on-site parking. Viewings can be arranged by contacting the property management company. External storage and garage options are available. The apartment is currently available for rent since July 20, 2023.",
     "bedroomCount": 2,
-    "sizeInMeters": 106.84,
+    "bathroomCount": 1,
+    "size": 1150,
+    "sizeType": "sqft",
     "importantInformation": {
-        "viewings": "Please contact the manager for viewing arrangements.",
-        "externalStorage": "Contact the manager for information on external storage options.",
-        "garage": "Contact the manager for information on parking options.",
-        "deliveryDate": "N/A"
+        "viewings": "Viewings can be arranged by contacting the property management company.",
+        "externalStorage": "External storage options are available.",
+        "garage": "Garage options are available.",
+        "deliveryDate": ""
     },
     "rentalDetails": {
         "rentPrice": "$1,750/month",
-        "securityDeposit": "Contact the manager for information on the security deposit.",
-        "rentalAgreement": "Contact the manager for information on the rental agreement.",
-        "availableSince": "Jul 20, 2023",
-        "status": "For Rent",
-        "acceptance": "Contact the manager for information on the acceptance process."
+        "securityDeposit": "",
+        "rentalAgreement": "",
+        "availableSince": "July 20, 2023",
+        "status": "",
+        "acceptance": "",
+        "rentOptions": []
     },
     "neighbourhood": "Old Fourth Ward",
     "lat": 33.7727423,

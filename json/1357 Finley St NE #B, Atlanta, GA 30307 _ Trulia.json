@@ -3,22 +3,33 @@
     "city": "Atlanta",
     "url": "https://www.trulia.com/p/ga/atlanta/1357-finley-st-ne-b-atlanta-ga-30307--2624413740",
     "address": "1357 Finley St NE #B, Atlanta, GA 30307",
-    "description": "Welcome to the Finley Street Cottages! A car-lite community where preservation meets progress in a distinctive collection of homes for everyone. Inspired by the historical footprint of two 1920's Craftsman Bungalows that have been lovingly reimagined, this incredible collection of 1, 2, & 3 bedroom homes effortlessly merges neighborly charm with modern amenities.  Just a few short blocks from Edgewood Retail & the Candler Park/Edgewood Marta Station & less than a 15 minute bike ride to the Atlanta Beltline, Krog Street Market, Madison Yards, Candler Park, Downtown Kirkwood & MUCH MUCH MORE you'll love the location of your new home as much as the people & the place. Finley St Cottages has multiple units available for any lifestyle and is ready for neighbors to call home!",
+    "description": "Welcome to the Finley Street Cottages! A car-lite community where preservation meets progress in a distinctive collection of homes for everyone. Inspired by the historical footprint of two 1920's Craftsman Bungalows that have been lovingly reimagined, this incredible collection of 1, 2, & 3 bedroom homes effortlessly merges neighborly charm with modern amenities. Just a few short blocks from Edgewood Retail & the Candler Park/Edgewood Marta Station & less than a 15 minute bike ride to the Atlanta Beltline, Krog Street Market, Madison Yards, Candler Park, Downtown Kirkwood & MUCH MUCH MORE you'll love the location of your new home as much as the people & the place. Finley St Cottages has multiple units available for any lifestyle and is ready for neighbors to call home!",
     "bedroomCount": "1",
-    "sizeInMeters": "None",
+    "bathroomCount": 1,
+    "size": "0",
+    "sizeType": "sqft",
     "importantInformation": {
         "viewings": "Contact Manager",
         "externalStorage": "Not allowed more than 1 car owned by the tenants of the property, and there's a $75 discount for having no cars for this unit (plenty of covered bike & e-bike storage available!)",
-        "garage": null,
-        "deliveryDate": null
+        "garage": "N/A",
+        "deliveryDate": "N/A"
     },
     "rentalDetails": {
         "rentPrice": "$1,675/mo",
-        "securityDeposit": null,
-        "rentalAgreement": null,
+        "securityDeposit": "N/A",
+        "rentalAgreement": "N/A",
         "availableSince": "Jun 27, 2023",
-        "status": null,
-        "acceptance": null
+        "status": "For Rent",
+        "acceptance": "N/A",
+        "rentOptions": [
+            {
+                "size": 0,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,675/mo",
+                "availableWhen": "Jun 27, 2023"
+            }
+        ]
     },
     "neighbourhood": "Edgewood",
     "lat": 33.7562609,

@@ -3,7 +3,7 @@ import pandas as pd
 import json
 import os
 from geocode import construct_folium_map, get_lat_lon_from_address
-from util import truncate_string 
+from util import truncate_string, load_description
 from notes import listing_notes, read_json, write_json
 from streamlit_folium import st_folium
 
@@ -73,7 +73,7 @@ def property_edit_form(filename):
   url = st.text_input("URL", json_data["url"]) 
   description = st.text_area("Description", json_data["description"])
   bedrooms = st.text_input("Bedrooms",  json_data["bedroomCount"])  
-  size = st.text_input("Size (sqm)", json_data["sizeInMeters"])
+  size = st.text_input("Size (sqm)", json_data["size"])
 
 
   # Save json_data on form submit
@@ -83,20 +83,35 @@ def property_edit_form(filename):
     json_data["url"] = url
     json_data["description"] = description 
     json_data["bedroomCount"] = bedrooms
-    json_data["sizeInMeters"] = size
+    json_data["size"] = size
 
     with open(json_file, 'w') as f:
       json.dump(json_data, f, indent=4)
         
     st.success("Saved!")
 
+ 
+ 
+def create_table(data):
+    if 'rentalDetails' in data and 'rentOptions' in data['rentalDetails']:
+        rent_options = data['rentalDetails']['rentOptions']
+        if rent_options:
+            table = "| Size | Beds | Baths | Price |\n|-|-|-|-|\n" 
+            for option in rent_options:
+                table += f"| {option['size']} sqft | {option['bedroomCount']} | {option['bathroomCount']} | {option['price']} |\n"
+            table += "\n_View listing for more details_"
+            return table
+        else:
+            return "No floorplans available"
+    else:
+        return "No floorplans available"
+ 
 
 def property_view_panel():
   obj = json.loads(st.session_state.selected_desc) 
   st.info(f"""
     {obj["description"]}
-
-    > _{obj["bedroomCount"]} bedrooms, {obj["sizeInMeters"]}m2_
+ 
 
     > Rent: {obj["rentalDetails"]["rentPrice"]}
 
@@ -105,8 +120,10 @@ def property_view_panel():
     """) 
   
   st.markdown(f'↗️ [Open Listing]({obj["url"]})')
-  if st.button('Remove Listing'):
-    delete_pdf_and_json_files(st.session_state.pdf_file)
+
+
+  with st.expander("Floor plans"):
+    st.markdown(create_table(obj))
 
 
  
@@ -120,18 +137,21 @@ def blank_page():
  
     col1, col2 = st.columns(2)
 
-    with col1: 
+    with col2:  
       st.write(obj["address"])
       construct_folium_map(info["lat"], info["lon"], st.session_state.city)
       favorite_button()
 
-    with col2:  
-      viewTab, editTab = st.tabs(['View', 'Edit'])
+    with col1: 
+      viewTab, editTab = st.tabs(['🏘️ Listing Details', '📝 Edit Listing'])
 
       with viewTab: 
         property_view_panel() 
-        "---"
-        listing_notes(st.session_state.pdf_file)
+
+        with st.expander("More"): 
+          listing_notes(st.session_state.pdf_file) 
+          if st.button('Remove Listing'):
+            delete_pdf_and_json_files(st.session_state.pdf_file)
 
       with editTab: 
         property_edit_form(st.session_state.pdf_file)  

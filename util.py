@@ -11,35 +11,8 @@ def convert_file_name(file_name):
   file_name = file_name.split(".")[0] 
   words = file_name.split("_") 
   words = [word.capitalize() for word in words] 
-  return " ".join(words)
-   
+  return " ".join(words) 
 
-# def get_document_list(city=None):
-#     folder_path = './src'
-#     file_object = {}
-
-#     # Iterate over each file in the folder
-#     for file_name in os.listdir(folder_path):
-#         if os.path.isfile(os.path.join(folder_path, file_name)):
-#             # Normalize the file name
-#             normalized_key = convert_file_name(file_name)
-#             basename = os.path.splitext(os.path.basename(file_name))[0]
-
-#             json_path = ''
-
-#             # Read the JSON content from the file
-#             with open(os.path.join(folder_path, file_name), 'r') as file:
-#                 json_data = json.load(file)
-
-#             # Check if the city property matches the passed-in city argument
-#             if city is None or (json_data.get('city') and json_data['city'].lower() == city.lower()):
-#                 # Store the file path in the dictionary
-#                 file_object[normalized_key] = './src/' + file_name + '.pdf'
-
-#     # Sort the file list alphabetically
-#     sorted_files = dict(sorted(file_object.items()))
-
-#     return sorted_files
 
 def get_document_list(city):
   folder_path = './src'
@@ -74,7 +47,7 @@ def get_document_list(city):
   return sorted_files
  
 
-def save_json_to_file(filename, json_string):
+def save_json_to_file(filename, json_string, refresh=False):
   try:
       # Parse the JSON string to ensure it is valid JSON
       json_data = json.loads(json_string)
@@ -86,13 +59,14 @@ def save_json_to_file(filename, json_string):
       new_filename = f"./json/{basename}.json"
 
       # Check if the new filename already exists
-      if os.path.exists(new_filename):
+      if os.path.exists(new_filename) and not refresh:
           print(f"Error: '{new_filename}' already exists. File not saved.")
       else:
-          # Save the JSON data to the new file
-          with open(new_filename, 'w') as file:
-              json.dump(json_data, file, indent=4)
-          print(f"JSON data saved to '{new_filename}'.")
+        # Save the JSON data to the new file
+
+        with open(new_filename, 'w') as file:
+            json.dump(json_data, file, indent=4)
+        print(f"JSON data saved to '{new_filename}'.")
   except json.JSONDecodeError as e:
       print(f"Error: Invalid JSON string - {e}")
   except Exception as e:
@@ -102,18 +76,17 @@ def save_json_to_file(filename, json_string):
 
 
 @st.cache_data
-def load_description(_qa, pdf):
+def load_description(_qa, pdf, refresh=False):
   st.session_state.chat_history = []
  
-
   # Get the basename and extension of the original filename
   basename, _ = os.path.splitext(os.path.basename(pdf))
 
   # Create a new filename using the same basename and ".json" extension
   new_filename = f"./json/{basename}.json"
 
-  if os.path.exists(new_filename):
-  # Read and return the contents of the existing file
+  if os.path.exists(new_filename) and not refresh:
+    # Read and return the contents of the existing file
     with open(new_filename, 'r') as file:
       existing_json_string = file.read()
       print(f"File '{new_filename}' already exists. Returning its contents.")
@@ -125,42 +98,54 @@ def load_description(_qa, pdf):
     create a JSON objects of properties about this listing. 
     use this interface.
     interface Property {
-        title: string;
-        city: string; // city only without state
-        url: string;
-        address: string;
-        description: string; // verbose description, bulleted list of features
-        bedroomCount: number;
-        sizeInMeters: number;
-        importantInformation: {
-          viewings: string;
-          externalStorage: string;
-          garage: string;
-          deliveryDate: string;
-        };
-        rentalDetails: {
-          rentPrice: string;
-          securityDeposit: string;
-          rentalAgreement: string;
-          availableSince: string;
-          status: string;
-          acceptance: string;
-        };
-        neighbourhood: string;
-      }
+      title: string;
+      city: string; // city only without state
+      url: string;
+      address: string;
+      description: string; // one paragrah, 100 words or less. focus on location and amenities
+      bedroomCount: number;
+      bathroomCount: number;
+      size: number;
+      sizeType: string; sqft|sqm
+      importantInformation: {
+        viewings: string;
+        externalStorage: string;
+        garage: string;
+        deliveryDate: string;
+      };
+      rentalDetails: {
+        rentPrice: string;
+        securityDeposit: string;
+        rentalAgreement: string; 
+        availableSince: string;
+        status: string;
+        acceptance: string;
+        rentOptions: Array<{ // if more than one floor plan is listed, specify them here
+          size: number;
+          bedroomCount: number;
+          bathroomCount: number;
+          price: string;
+          availableWhen: string;
+        }>;
+      };
+      neighbourhood: string;
+    }
+
 
     translate all information to english         
       """, "chat_history": []})
+    
     data = result["answer"]
 
     answer = get_coords(data)
 
-    save_json_to_file(pdf, answer)
-    return result #json.loads(result) 
+    save_json_to_file(pdf, answer, refresh)
+
+    return result  
 
 def get_coords(data):
   obj = json.loads(data) 
-  # print('obj', obj)
+  
   info = get_lat_lon_from_address(obj["address"] + " " + obj["city"] + ", NL")
   print('geocode', info)
   obj["lat"] = info["lat"]
@@ -207,7 +192,7 @@ def initialize_session():
     "city": "Amsterdam",
     "selected_desc": None,
     "llm_temparature": 0.7,
-    "pdf_file": './src/client_api_reference.pdf' 
+    "pdf_file": './src/Appartement te huur_ Entrepotbrug 151 1019 JH Amsterdam [funda].pdf' 
   }
  
   for key, value in session_keys.items():

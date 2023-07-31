@@ -3,22 +3,40 @@
     "city": "Atlanta",
     "url": "https://www.trulia.com/building/modera-reynoldstown-780-memorial-dr-se-atlanta-ga-30316-2092101600",
     "address": "780 Memorial Dr SE, Atlanta, GA 30316",
-    "description": "Modera Reynoldstown offers modern apartments with a variety of floorplans and sizes. The community features a pool, outdoor patio, and pet-friendly policies. The apartments include amenities such as air conditioning and on-site parking. Office hours are from 10:00am to 6:00pm on weekdays and 10:00am to 5:00pm on Saturdays.",
-    "bedroomCount": 2,
-    "sizeInMeters": 104.79,
+    "description": "Modera Reynoldstown is located in the vibrant city of Atlanta, providing residents with a prime location and convenient access to amenities. This apartment community offers a variety of floor plans with 1-2 bedrooms and 1-2 bathrooms. The units range in size from 597 sqft to 1,149 sqft, providing ample space for residents. Modera Reynoldstown features a pet-friendly policy, a pool, and an outdoor patio for residents to enjoy. With its central location and modern amenities, Modera Reynoldstown is the perfect place to call home.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 597,
+    "sizeType": "sqft",
     "importantInformation": {
-        "viewings": "Contact the property manager to schedule viewings.",
-        "externalStorage": "Unknown",
-        "garage": "Unknown",
-        "deliveryDate": "Unknown"
+        "viewings": "Viewings can be scheduled during office hours.",
+        "externalStorage": "External storage options are available.",
+        "garage": "Garage parking is available.",
+        "deliveryDate": "Available for move-in."
     },
     "rentalDetails": {
-        "rentPrice": "$2,329",
-        "securityDeposit": "Unknown",
-        "rentalAgreement": "Unknown",
-        "availableSince": "Unknown",
-        "status": "Unknown",
-        "acceptance": "Unknown"
+        "rentPrice": "$1,714",
+        "securityDeposit": "Contact manager for details.",
+        "rentalAgreement": "Contact manager for details.",
+        "availableSince": "Available for rent.",
+        "status": "Available",
+        "acceptance": "Contact manager for details.",
+        "rentOptions": [
+            {
+                "size": 597,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,714",
+                "availableWhen": "Available for rent."
+            },
+            {
+                "size": 482,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,742",
+                "availableWhen": "Contact manager for availability."
+            }
+        ]
     },
     "neighbourhood": "Reynoldstown",
     "lat": 33.7476412,

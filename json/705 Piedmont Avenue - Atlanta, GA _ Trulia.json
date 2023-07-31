@@ -3,25 +3,35 @@
     "city": "Atlanta",
     "url": "https://www.trulia.com/building/705-piedmont-avenue-705-piedmont-ave-ne-atlanta-ga-30308-1001506020",
     "address": "705 Piedmont Avenue, Atlanta, GA 30308",
-    "description": "Luxury Apartments & Other Communities. Single Family Homes. Lofts. Condos. Rentals with Washers and Dryers. Rentals with Air Conditioning. Rentals with Barbecue Areas. Rentals with Waterfront Views.",
+    "description": "705 Piedmont Avenue is a luxury apartment located in Atlanta, GA. It offers a prime location with waterfront views and easy access to amenities such as barbecue areas. The apartment features 1 bedroom and 1 bathroom, with a size of 700 sqft. It is pet-friendly and does not include utilities. Viewings for this property can be scheduled through the provided link.",
     "bedroomCount": 1,
-    "sizeInMeters": 700,
+    "bathroomCount": 1,
+    "size": 700,
+    "sizeType": "sqft",
     "importantInformation": {
-        "viewings": "Contact Manager",
-        "externalStorage": "Contact Manager",
-        "garage": "Contact Manager",
-        "deliveryDate": "N/A"
+        "viewings": "Viewings for this property can be scheduled through the provided link.",
+        "externalStorage": "Unknown",
+        "garage": "Unknown",
+        "deliveryDate": "Unknown"
     },
     "rentalDetails": {
         "rentPrice": "$1,350",
         "securityDeposit": "Unknown",
-        "rentalAgreement": "Contact Manager",
-        "availableSince": "N/A",
+        "rentalAgreement": "Unknown",
+        "availableSince": "Unknown",
         "status": "Unknown",
-        "acceptance": "Contact Manager"
+        "acceptance": "Unknown",
+        "rentOptions": [
+            {
+                "size": 700,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,350",
+                "availableWhen": "Unknown"
+            }
+        ]
     },
-    "neighbourhood": "Unknown",
+    "neighbourhood": "Atlanta",
     "lat": 33.7737368,
-    "lon": -84.38125509999999,
-    "favorite": true
+    "lon": -84.38125509999999
 }

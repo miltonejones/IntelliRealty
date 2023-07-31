@@ -1,0 +1,58 @@
+{
+    "title": "Oak Pointe",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/oak-pointe-469-oakdale-rd-ne-atlanta-ga-30307-1050561934",
+    "address": "469 Oakdale Rd NE, Atlanta, GA 30307",
+    "description": "Oak Pointe is a pet-friendly apartment complex located in the Candler Park neighborhood of Atlanta. The complex offers 2-bedroom units with sizes ranging from 850 sqft. The apartments feature air conditioning and include garbage utilities. Oak Pointe is conveniently located within walking distance to restaurants and has sidewalks for easy access to the surrounding area. The complex has a friendly community atmosphere with residents often walking their dogs and playing outside. Office hours are Monday to Friday from 8:30am to 5:30pm.",
+    "bedroomCount": 2,
+    "bathroomCount": 1,
+    "size": 850,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Contact the manager",
+        "externalStorage": "Contact the manager",
+        "garage": "Contact the manager",
+        "deliveryDate": "Contact the manager"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,475 - $1,670/mo",
+        "securityDeposit": "Contact the manager",
+        "rentalAgreement": "Contact the manager",
+        "availableSince": "Contact the manager",
+        "status": "Contact the manager",
+        "acceptance": "Contact the manager",
+        "rentOptions": [
+            {
+                "size": 850,
+                "bedroomCount": 2,
+                "bathroomCount": 1,
+                "price": "$1,475 - $1,520",
+                "availableWhen": "Contact the manager"
+            },
+            {
+                "size": 850,
+                "bedroomCount": 2,
+                "bathroomCount": 1,
+                "price": "$1,630",
+                "availableWhen": "Contact the manager"
+            },
+            {
+                "size": 850,
+                "bedroomCount": 2,
+                "bathroomCount": 1,
+                "price": "$1,645",
+                "availableWhen": "Contact the manager"
+            },
+            {
+                "size": 850,
+                "bedroomCount": 2,
+                "bathroomCount": 1,
+                "price": "$1,670",
+                "availableWhen": "Contact the manager"
+            }
+        ]
+    },
+    "neighbourhood": "Candler Park",
+    "lat": 33.7670374,
+    "lon": -84.34141869999999
+}

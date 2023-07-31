@@ -1,0 +1,38 @@
+{
+    "title": "705 Piedmont Avenue",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/705-piedmont-avenue-705-piedmont-ave-ne-atlanta-ga-30308-1001506020",
+    "address": "705 Piedmont Avenue, Atlanta, GA 30308",
+    "description": "Located in the heart of Atlanta, this property at 705 Piedmont Avenue offers a convenient and vibrant lifestyle. With close proximity to amenities such as shopping, dining, and entertainment, residents can easily explore everything the city has to offer. The property features luxury apartments with modern amenities and stunning waterfront views. Each unit comes with a washer and dryer, air conditioning, and a barbecue area for residents to enjoy. With its prime location and desirable features, this property is perfect for those seeking a comfortable and stylish living experience.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 700,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Please contact the manager to schedule a viewing.",
+        "externalStorage": "External storage is available.",
+        "garage": "Garage parking is not available.",
+        "deliveryDate": "Immediate move-in available."
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,350",
+        "securityDeposit": "One month's rent",
+        "rentalAgreement": "Contact the manager for rental agreement details.",
+        "availableSince": "Listed on Trulia",
+        "status": "Available",
+        "acceptance": "Subject to approval",
+        "rentOptions": [
+            {
+                "size": 700,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,350",
+                "availableWhen": "Immediate"
+            }
+        ]
+    },
+    "neighbourhood": "Piedmont Avenue",
+    "lat": 33.7737368,
+    "lon": -84.38125509999999,
+    "favorite": true
+}

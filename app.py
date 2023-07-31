@@ -65,7 +65,7 @@ def render_sidebar():
         # Save the uploaded file and display a success message
         file_path = save_uploaded_file(uploaded_file)
         st.success(f"File saved successfully: {file_path}")  
-     #   st.experimental_rerun()
+        st.experimental_rerun()
 
  
 
@@ -78,11 +78,11 @@ def main():
   # set initial session values
   initialize_session() 
 
-  
-
   # draw page side bar
   render_sidebar()
  
+
+
   # Create a ChatOpenAI object for streaming chat with specified temperature
   chat = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=st.session_state.llm_temparature)
 
@@ -133,6 +133,10 @@ def main():
   else:  
     if len(st.session_state.chat_history) == 0:
       blank_page()
-     
+      if st.button('Refresh Listing'):
+          load_description(qa, st.session_state.pdf_file, True) 
+          # st.experimental_rerun()
+
+      
 if __name__ == "__main__":
   main()

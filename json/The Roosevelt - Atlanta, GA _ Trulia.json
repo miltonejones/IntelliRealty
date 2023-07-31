@@ -1,0 +1,37 @@
+{
+    "title": "The Roosevelt",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/the-roosevelt-745-hansell-st-se-atlanta-ga-30312-1001416224",
+    "address": "745 Hansell St SE, Atlanta, GA 30312",
+    "description": "The Roosevelt is a luxury apartment building located in the heart of Atlanta, offering a prime location and top-notch amenities. With spacious floor plans and modern finishes, these apartments provide a comfortable and stylish living experience. Residents will enjoy the convenience of on-site parking and access to an outdoor pool. The building is pet-friendly, allowing both dogs and cats. Utilities are included in the rent. Explore the various floor plans available, ranging from studios to two-bedroom apartments. Experience the best of Atlanta living at The Roosevelt.",
+    "bedroomCount": 0,
+    "bathroomCount": 1,
+    "size": 400,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Contact the manager to schedule a viewing.",
+        "externalStorage": "Contact the manager for information about external storage options.",
+        "garage": "Contact the manager for information about garage availability.",
+        "deliveryDate": "N/A"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,020",
+        "securityDeposit": "N/A",
+        "rentalAgreement": "Contact the manager for details.",
+        "availableSince": "N/A",
+        "status": "Available",
+        "acceptance": "Contact the manager for rental application process.",
+        "rentOptions": [
+            {
+                "size": 400,
+                "bedroomCount": 0,
+                "bathroomCount": 1,
+                "price": "$1,020",
+                "availableWhen": "Immediate"
+            }
+        ]
+    },
+    "neighbourhood": "The Roosevelt is located in the vibrant city of Atlanta, offering easy access to a wide range of amenities, including restaurants, shops, and entertainment venues. The neighborhood is known for its lively atmosphere and diverse community. Residents can enjoy nearby parks and recreational areas, as well as convenient transportation options. Experience the best of Atlanta living in this desirable neighborhood.",
+    "lat": 33.7387539,
+    "lon": -84.3634654
+}
