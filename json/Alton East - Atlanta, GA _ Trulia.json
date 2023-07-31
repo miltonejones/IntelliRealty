@@ -1,0 +1,37 @@
+{
+    "title": "Alton East",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/alton-east-777-memorial-dr-se-atlanta-ga-30316-2243581876",
+    "address": "777 Memorial Dr SE, Atlanta, GA 30316",
+    "description": "Alton East is a pet-friendly apartment community located in Atlanta, GA. It offers a variety of floor plans including studios, 1-bedroom, 2-bedroom, and 3-bedroom units. The apartments feature amenities such as an outdoor pool, a parking lot, and utilities included in the rent. The property is conveniently located in the Reynoldstown neighborhood, which is known for being dog-friendly and walkable to restaurants and grocery stores. The office hours are as follows: Mon 9:00am to 7:00pm, Tue 9:00am to 6:00pm, Wed 9:00am to 7:00pm, Thu 9:00am to 6:00pm, Fri 9:00am to 7:00pm, Sat 10:00am to 6:00pm, Sun 11:00am to 5:00pm.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 450,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Wed 9:00am to 7:00pm, Thu 9:00am to 6:00pm, Fri 9:00am to 7:00pm, Sat 10:00am to 6:00pm, Sun 11:00am to 5:00pm",
+        "externalStorage": "Unknown",
+        "garage": "No",
+        "deliveryDate": "Unknown"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,423 - $1,448",
+        "securityDeposit": "Unknown",
+        "rentalAgreement": "Unknown",
+        "availableSince": "Unknown",
+        "status": "Unknown",
+        "acceptance": "Unknown",
+        "rentOptions": [
+            {
+                "size": 450,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,423 - $1,448",
+                "availableWhen": "Unknown"
+            }
+        ]
+    },
+    "neighbourhood": "Reynoldstown",
+    "lat": 33.7465583,
+    "lon": -84.3611226
+}

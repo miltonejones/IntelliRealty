@@ -1,0 +1,37 @@
+{
+    "title": "Altitude",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/altitude-250-piedmont-ave-ne-atlanta-ga-30308-1050793003",
+    "address": "250 Piedmont Ave NE, Atlanta, GA 30308",
+    "description": "Altitude is a pet-friendly apartment building located in Atlanta, GA. It offers a variety of floor plans, including 1 and 2-bedroom options. The apartments feature amenities such as a parking garage, outdoor patio, and on-site management. The property is conveniently located near the heart of Atlanta, providing easy access to dining, shopping, and entertainment options. With its modern design and desirable amenities, Altitude offers a comfortable and convenient living experience.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 686,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Fri 10:00am to 6:00pm, Sat 10:00am to 5:00pm",
+        "externalStorage": "Unknown",
+        "garage": "Available",
+        "deliveryDate": "Unknown"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,729 - $1,824",
+        "securityDeposit": "Unknown",
+        "rentalAgreement": "Contact Manager",
+        "availableSince": "Unknown",
+        "status": "Unknown",
+        "acceptance": "Unknown",
+        "rentOptions": [
+            {
+                "size": 686,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,729 - $1,824",
+                "availableWhen": "Unknown"
+            }
+        ]
+    },
+    "neighbourhood": "Atlanta, GA",
+    "lat": 33.7615448,
+    "lon": -84.38242799999999
+}

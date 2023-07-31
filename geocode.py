@@ -34,7 +34,7 @@ def construct_folium_map(selected_lat, selected_lon, town=None):
                     folium.CircleMarker(
                         location=[lat,lon],
                         radius=8,
-                        popup=json_data["address"],
+                        popup=filename,
                         tooltip=json_data["address"],
                         color="#3186cc",
                         fill=True,

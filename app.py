@@ -6,7 +6,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.chat_models import ChatOpenAI
 from blank import blank_page
-from util import get_document_list, truncate_string, initialize_session, load_description, load_source_document, save_uploaded_file
+from util import get_document_list, displayPDF, truncate_string, initialize_session, load_description, load_source_document, save_uploaded_file
 import streamlit as st
 
 load_dotenv()
@@ -24,7 +24,8 @@ def render_sidebar():
   
   with st.sidebar:
 
-    st.write("🏡 **IntelliRealty**") 
+    if st.button("🏡 **IntelliRealty**",  help="Reset conversation"):
+      st.session_state.chat_history = []
 
     selected_city = st.radio('City:',
                              ['Amsterdam', 'Atlanta'],
@@ -53,24 +54,18 @@ def render_sidebar():
     with st.expander(":gear: Settings"):
       # Create the slider and update 'llm_temparature' when it's changed
       st.session_state.llm_temparature = st.slider('Set LLM temperature', 0.0, 1.0, step=0.1, value=st.session_state.llm_temparature )
-
-      if len(st.session_state.chat_history) > 0: 
-        if st.button("➕ New Chat",  help="Reset conversation"):
-          st.session_state.chat_history = []
+   
 
     with st.expander(":file_folder: Add listing"):
-      uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
+      uploaded_files = st.file_uploader("Upload PDF files", type="pdf", accept_multiple_files=True)
 
-      if uploaded_file is not None:
-        # Save the uploaded file and display a success message
-        file_path = save_uploaded_file(uploaded_file)
-        st.success(f"File saved successfully: {file_path}")  
-        st.experimental_rerun()
+      if uploaded_files is not None:
+        for uploaded_file in uploaded_files:
+          # Save each uploaded file and display a success message
+          file_path = save_uploaded_file(uploaded_file)
+          st.success(f"File saved successfully: {file_path}")   
 
  
-
-
-
 def main(): 
 
   st.set_page_config(page_title="IntelliRealty", layout="wide") 
@@ -81,8 +76,6 @@ def main():
   # draw page side bar
   render_sidebar()
  
-
-
   # Create a ChatOpenAI object for streaming chat with specified temperature
   chat = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=st.session_state.llm_temparature)
 
@@ -95,11 +88,7 @@ def main():
   # Load the description using the conversation chain and store the answer in selected_desc
   loc = load_description(qa, st.session_state.pdf_file)['answer'] 
 
-
-  st.session_state.selected_desc = loc
-
-  # print('details', st.session_state.selected_desc)
-
+  st.session_state.selected_desc = loc 
 
   # render existing chats
   for message in st.session_state.chat_history:
@@ -135,8 +124,7 @@ def main():
       blank_page()
       if st.button('Refresh Listing'):
           load_description(qa, st.session_state.pdf_file, True) 
-          # st.experimental_rerun()
+       
 
-      
 if __name__ == "__main__":
   main()

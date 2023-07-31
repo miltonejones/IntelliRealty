@@ -1,0 +1,29 @@
+{
+    "title": "75 Ponce De Leon Ave NE #1010",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/p/ga/atlanta/75-ponce-de-leon-ave-ne-1010-atlanta-ga-30308--2092036105",
+    "address": "75 Ponce De Leon Ave NE #1010, Atlanta, GA 30308",
+    "description": "This apartment is located in the vibrant neighborhood of Midtown, Atlanta. It offers a convenient and desirable location with easy access to amenities and attractions. The unit features 1 bedroom and 1 bathroom, perfect for individuals or couples. The apartment has a cooling-only A/C system, and the utilities are included in the rent. The property also offers garage parking and on-site management. With its ideal location and great amenities, this apartment is a fantastic choice for anyone looking to live in the heart of Atlanta.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 452,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Contact the manager for viewing arrangements.",
+        "externalStorage": "No external storage available.",
+        "garage": "Garage parking is available.",
+        "deliveryDate": ""
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,650/month",
+        "securityDeposit": "",
+        "rentalAgreement": "",
+        "availableSince": "Listed on Jul 31, 2023",
+        "status": "",
+        "acceptance": "",
+        "rentOptions": []
+    },
+    "neighbourhood": "Midtown",
+    "lat": 33.7720046,
+    "lon": -84.38442289999999
+}

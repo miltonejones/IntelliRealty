@@ -1,0 +1,37 @@
+{
+    "title": "Skyline ATL",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/skyline-atl-396-piedmont-ave-ne-atlanta-ga-30308-1001415181",
+    "address": "396 Piedmont Ave NE, Atlanta, GA 30308",
+    "description": "Skyline ATL is a luxurious apartment complex located in the heart of Atlanta. With its convenient location, residents have easy access to the vibrant city life and all the amenities it has to offer. The apartments feature modern interiors and spacious layouts, providing a comfortable living experience. The property also offers a variety of amenities, including a patio, pool, and parking lot. Pets are welcome in the building, making it a pet-friendly community. If you're looking for a stylish and convenient place to call home in Atlanta, Skyline ATL is the perfect choice.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 845,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Viewings are available by appointment. Please contact the office for more information.",
+        "externalStorage": "External storage options are available. Contact the manager for details.",
+        "garage": "Parking is provided in the parking lot of the building.",
+        "deliveryDate": ""
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,547 - $2,094",
+        "securityDeposit": "",
+        "rentalAgreement": "",
+        "availableSince": "",
+        "status": "",
+        "acceptance": "",
+        "rentOptions": [
+            {
+                "size": 845,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,547 - $2,094",
+                "availableWhen": ""
+            }
+        ]
+    },
+    "neighbourhood": "Midtown",
+    "lat": 33.7645756,
+    "lon": -84.38237749999999
+}
