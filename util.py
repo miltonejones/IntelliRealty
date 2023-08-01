@@ -246,7 +246,7 @@ def truncate_string(input_string):
     input_string = input_string.replace("Amsterdam", "") 
  
     # Truncate the string to the first and last 10 characters
-    truncated_string = prefix + input_string[:25] + '...' + input_string[-5:]
+    truncated_string = prefix + input_string[:25] + '...' + input_string[-12:]
 
     return truncated_string
  

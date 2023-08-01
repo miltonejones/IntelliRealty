@@ -3,7 +3,29 @@ import os
 import json
 import pandas as pd
 import folium
+from stations import get_marta_stations
 from streamlit_folium import st_folium
+from folium import Map, PolyLine
+
+def add_stations_to_map(stations, map):
+   for line_color, station_info in stations.items():
+        coordinates = []
+        for name, coords in station_info.items():
+            coordinates.append((coords['lat'], coords['long']))
+            folium.CircleMarker(
+                location=[coords['lat'], coords['long']],
+                radius=6,
+                color=line_color,
+                fill=True,
+                popup=f'{name} Station',
+                tooltip=f'{name} Station'
+            ).add_to(map)
+
+        polyline = PolyLine(locations=coordinates, weight=3, color=line_color)
+        polyline.add_to(map)
+
+
+
 
 
 def construct_folium_map(selected_lat, selected_lon, town=None):
@@ -41,6 +63,8 @@ def construct_folium_map(selected_lat, selected_lon, town=None):
                         fill_color="#3186cc",
                     ).add_to(map)
 
+    if town is 'Atlanta':
+      add_stations_to_map(get_marta_stations(), map)
 
     st_folium(map, width='100%', height=400) 
  

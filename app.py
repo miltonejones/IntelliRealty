@@ -36,7 +36,7 @@ def render_sidebar():
     st.session_state.source_docs = source_docs 
 
     # Display radio buttons and handle document selection
-    selected_option = st.radio('Listing:', 
+    selected_option = st.selectbox('Listing:', 
                                 list(source_docs.keys()), 
                                 key="selected_option_key", 
                                 format_func=truncate_string,
