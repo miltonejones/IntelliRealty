@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import os
+import shutil
 from geocode import construct_folium_map, get_lat_lon_from_address
 from util import truncate_string, load_description
 from notes import listing_notes, read_json, write_json
@@ -41,6 +42,7 @@ def delete_pdf_and_json_files(filename):
   # Define the paths to the PDF and JSON files based on the filename
   pdf_file_path = os.path.join('src', basename + '.pdf')
   json_file_path = os.path.join('json', basename + '.json')
+  db_file_path = os.path.join('db', basename )
 
   # Check if the PDF and JSON files exist before deleting
   if os.path.exists(pdf_file_path):
@@ -53,7 +55,13 @@ def delete_pdf_and_json_files(filename):
       os.remove(json_file_path)
       print(f"Deleted JSON file: {json_file_path}")
   else:
-      print(f"JSON file not found: {json_file_path}")
+      print(f"JSON file not found: {json_file_path}") 
+
+  try:
+      shutil.rmtree(db_file_path)
+      print(f"Folder {db_file_path} has been successfully removed.")
+  except OSError as e:
+      print(f"Error occurred while removing the folder: {e}")
 
   st.experimental_rerun()
  

@@ -1,0 +1,37 @@
+{
+    "title": "Mira at Midtown Union",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/mira-at-midtown-union-1301-spring-st-nw-atlanta-ga-30309-2092040554",
+    "address": "1301 Spring St NW, Atlanta, GA 30309",
+    "description": "Mira at Midtown Union is a luxurious apartment community located in the heart of Atlanta. With its prime location in Midtown, residents have easy access to the city's best dining, shopping, and entertainment options. The community offers a variety of floor plans to choose from, ranging from studios to three-bedroom apartments. Amenities include an outdoor pool, A/C cooling, and included utilities. Pets are allowed, making it a pet-friendly community. The property is in close proximity to major highways and public transportation, making commuting a breeze.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 579,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Contact the manager for viewing appointments.",
+        "externalStorage": "External storage is available.",
+        "garage": "Garage parking is available.",
+        "deliveryDate": "Available for move-in immediately."
+    },
+    "rentalDetails": {
+        "rentPrice": "$2,120 - $2,410",
+        "securityDeposit": "Contact the manager for details.",
+        "rentalAgreement": "Contact the manager for details.",
+        "availableSince": "Available for rent.",
+        "status": "Available",
+        "acceptance": "Contact the manager for details.",
+        "rentOptions": [
+            {
+                "size": 579,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$2,120 - $2,410",
+                "availableWhen": "Available for rent."
+            }
+        ]
+    },
+    "neighbourhood": "Midtown",
+    "lat": 33.7901498,
+    "lon": -84.38911809999999
+}

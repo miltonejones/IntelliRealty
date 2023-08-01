@@ -1,0 +1,38 @@
+{
+    "title": "Eon at Lindbergh",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/building/eon-at-lindbergh-2450-camellia-ln-ne-atlanta-ga-30324-1001415319",
+    "address": "2450 Camellia Ln NE",
+    "description": "Eon at Lindbergh is a modern apartment community located in the vibrant neighborhood of Lindbergh in Atlanta. The spacious one-bedroom units offer a comfortable living space with amenities such as a private patio or balcony, walk-in closets, and a gourmet kitchen. The community features a pool and outdoor patio area, perfect for relaxing and enjoying the city view. Conveniently located near grocery stores, restaurants, and public transportation, Eon at Lindbergh offers a convenient and exciting urban lifestyle.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 652,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Viewings are available during the following hours: Wed-Fri 9am-6pm, Sat 10am-5pm",
+        "externalStorage": "External storage is available",
+        "garage": "Parking is available, please contact the manager for more information",
+        "deliveryDate": ""
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,440/mo",
+        "securityDeposit": "",
+        "rentalAgreement": "",
+        "availableSince": "",
+        "status": "",
+        "acceptance": "",
+        "rentOptions": [
+            {
+                "size": 652,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,440",
+                "availableWhen": ""
+            }
+        ]
+    },
+    "neighbourhood": "Lindbergh",
+    "lat": 33.8227293,
+    "lon": -84.3717113,
+    "favorite": true
+}

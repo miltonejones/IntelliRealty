@@ -74,6 +74,39 @@ def save_json_to_file(filename, json_string, refresh=False):
       print(f"Error: {e}")
  
 
+def load_source_documents(city):
+  folder_path = './src'
+  sources = []
+  embeddings = OpenAIEmbeddings()
+  # Iterate over each file in the folder
+  for file_name in os.listdir(folder_path):
+    
+    print ('file_name', file_name)
+    # if os.path.isfile(os.path.join(folder_path, file_name)):
+      
+    folder_name = os.path.splitext(os.path.basename(file_name))[0]
+
+    json_path = f'./json/{folder_name}.json'
+    print ('json_path', json_path)
+
+    if os.path.exists(json_path):
+      with open(json_path, 'r') as file:
+          json_data = json.load(file)
+
+      if city is None or (json_data.get('city') and json_data['city'].lower() == city.lower()):
+        folder_path = f'db/{folder_name}'
+        if os.path.exists(folder_path) and os.path.isdir(folder_path):
+          print (folder_path)
+          # Folder already exists, do something if needed 
+          db = FAISS.load_local(folder_path, embeddings) 
+          sources.append(db)
+
+  first_element = sources[0]
+  for element in sources[1:]:
+      first_element.merge_from(element)
+  print('sources', first_element)
+  return first_element
+
 
 
 @st.cache_data
@@ -173,6 +206,8 @@ def load_source_document(pdf_file):
       db.save_local(folder_path)
       return db
     
+
+
 def save_uploaded_file(uploaded_file):
   # Create the 'src' folder if it doesn't exist
   if not os.path.exists('src'):

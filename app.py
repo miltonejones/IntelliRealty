@@ -6,7 +6,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.chat_models import ChatOpenAI
 from blank import blank_page
-from util import get_document_list, displayPDF, truncate_string, initialize_session, load_description, load_source_document, save_uploaded_file
+from util import get_document_list, displayPDF, truncate_string, initialize_session, load_source_documents, load_description, load_source_document, save_uploaded_file
 import streamlit as st
 
 load_dotenv()
@@ -25,19 +25,15 @@ def render_sidebar():
   with st.sidebar:
 
     if st.button("🏡 **IntelliRealty**",  help="Reset conversation"):
-      st.session_state.chat_history = []
-
-    selected_city = st.radio('City:',
+      st.session_state.chat_history = [] 
+    
+    selected_city = st.selectbox('City:',
                              ['Amsterdam', 'Atlanta'],
-                             key="city",
-                             horizontal=True)
-    # st.caption("Apartment Search Chatbot") 
+                             key="city") 
     
-    source_docs = get_document_list(st.session_state.city)
-    
+    source_docs = get_document_list(st.session_state.city) 
 
-    st.session_state.source_docs = source_docs
-
+    st.session_state.source_docs = source_docs 
 
     # Display radio buttons and handle document selection
     selected_option = st.radio('Listing:', 
@@ -77,10 +73,12 @@ def main():
   render_sidebar()
  
   # Create a ChatOpenAI object for streaming chat with specified temperature
-  chat = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()], temperature=st.session_state.llm_temparature)
+  chat = ChatOpenAI(streaming=True, callbacks=[StreamingStdOutCallbackHandler()],  model="gpt-3.5-turbo", max_tokens=1024, temperature=st.session_state.llm_temparature)
 
   # Load the source document for the conversation retrieval
   db = load_source_document(st.session_state.pdf_file)
+
+  # db = load_source_documents(st.session_state.city)
 
   # Create a conversation chain that uses the vectordb as a retriever, allowing for chat history management
   qa = ConversationalRetrievalChain.from_llm(chat, db.as_retriever())
