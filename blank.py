@@ -143,26 +143,38 @@ def blank_page():
     obj = json.loads(st.session_state.selected_desc) 
     info = get_lat_lon_from_address(obj["address"] + " " + obj["city"] ) 
  
-    col1, col2 = st.columns(2)
 
-    with col2:  
+    # if 'view' not in st.session_state:
+    #     st.session_state.view = 'Listing'
+
+    # selected_view = st.selectbox('View:',
+    #                       ['Listing', 'Map'],
+    #                       key="view") 
+    
+    if st.session_state.view  is 'Map':
       st.write(obj["address"])
-      construct_folium_map(info["lat"], info["lon"], st.session_state.city)
-      favorite_button()
+      construct_folium_map(info["lat"], info["lon"], st.session_state.city, 768, 13)
+    else:   
+      col1, col2 = st.columns(2)
 
-    with col1: 
-      viewTab, editTab = st.tabs(['🏘️ Listing Details', '📝 Edit Listing'])
+      with col2:  
+        st.write(obj["address"])
+        construct_folium_map(info["lat"], info["lon"], st.session_state.city)
+        favorite_button()
 
-      with viewTab: 
-        property_view_panel() 
+      with col1: 
+        viewTab, editTab = st.tabs(['🏘️ Listing Details', '📝 Edit Listing'])
 
-        with st.expander("More"): 
-          listing_notes(st.session_state.pdf_file) 
-          if st.button('Remove Listing'):
-            delete_pdf_and_json_files(st.session_state.pdf_file)
+        with viewTab: 
+          property_view_panel() 
 
-      with editTab: 
-        property_edit_form(st.session_state.pdf_file)  
+          with st.expander("More"): 
+            listing_notes(st.session_state.pdf_file) 
+            if st.button('Remove Listing'):
+              delete_pdf_and_json_files(st.session_state.pdf_file)
+
+        with editTab: 
+          property_edit_form(st.session_state.pdf_file)  
 
   except Exception as e:
       st.warning('Could not get coordinates.')

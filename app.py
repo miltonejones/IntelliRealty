@@ -26,9 +26,18 @@ def render_sidebar():
 
     if st.button("🏡 **IntelliRealty**",  help="Reset conversation"):
       st.session_state.chat_history = [] 
+
+    if 'view' not in st.session_state:
+        st.session_state.view = 'Listing'
+
+    st.radio('View:',
+                ['Listing', 'Map'],
+                horizontal=True,
+                key="view") 
     
-    selected_city = st.selectbox('City:',
+    selected_city = st.radio('City:',
                              ['Amsterdam', 'Atlanta'],
+                horizontal=True,
                              key="city") 
     
     source_docs = get_document_list(st.session_state.city) 
@@ -121,7 +130,7 @@ def main():
     if len(st.session_state.chat_history) == 0:
       blank_page()
       if st.button('Refresh Listing'):
-          load_description(qa, st.session_state.pdf_file, True) 
+        load_description(qa, st.session_state.pdf_file, True) 
        
 
 if __name__ == "__main__":

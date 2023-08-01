@@ -28,11 +28,11 @@ def add_stations_to_map(stations, map):
 
 
 
-def construct_folium_map(selected_lat, selected_lon, town=None):
+def construct_folium_map(selected_lat, selected_lon, town=None, height=400, zoom_start=12):
     folder_path = "./json"
    
   
-    map = folium.Map(location=[selected_lat, selected_lon], zoom_start=12)
+    map = folium.Map(location=[selected_lat, selected_lon], zoom_start=zoom_start)
 
     for filename in os.listdir(folder_path):
         if filename.endswith(".json"):
@@ -66,7 +66,7 @@ def construct_folium_map(selected_lat, selected_lon, town=None):
     if town is 'Atlanta':
       add_stations_to_map(get_marta_stations(), map)
 
-    st_folium(map, width='100%', height=400) 
+    st_folium(map, width='100%', height=height) 
  
      
 
@@ -99,3 +99,6 @@ def get_lat_lon_from_address(address):
         print(f"Error: {e}")
         return None
  
+
+
+print(get_lat_lon_from_address("6000 S Terminal Pkwy, Atlanta, GA 30337"))
