@@ -237,7 +237,7 @@ def initialize_session():
 
 
 
-def truncate_string(input_string):
+def truncate_string(input_string, limit=25):
     item = st.session_state.source_docs[input_string]
     prefix = '❤️ ' if item['favorite'] else ''
 
@@ -246,7 +246,7 @@ def truncate_string(input_string):
     input_string = input_string.replace("Amsterdam", "") 
  
     # Truncate the string to the first and last 10 characters
-    truncated_string = prefix + input_string[:25] + '...' + input_string[-12:]
+    truncated_string = prefix + input_string[:limit] + '...' + input_string[-5:]
 
     return truncated_string
  

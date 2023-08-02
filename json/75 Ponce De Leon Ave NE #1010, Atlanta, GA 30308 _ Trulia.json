@@ -25,5 +25,6 @@
     },
     "neighbourhood": "Midtown",
     "lat": 33.7720046,
-    "lon": -84.38442289999999
+    "lon": -84.38442289999999,
+    "favorite": true
 }

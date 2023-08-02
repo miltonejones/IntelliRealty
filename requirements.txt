@@ -12,3 +12,4 @@ faiss-cpu
 duckduckgo-search
 folium
 streamlit_folium
+streamlit-option-menu

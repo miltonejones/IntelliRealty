@@ -14,25 +14,24 @@ def add_stations_to_map(stations, map):
             coordinates.append((coords['lat'], coords['long']))
             folium.CircleMarker(
                 location=[coords['lat'], coords['long']],
-                radius=6,
+                radius=4,
                 color=line_color,
                 fill=True,
                 popup=f'{name} Station',
                 tooltip=f'{name} Station'
             ).add_to(map)
 
-        polyline = PolyLine(locations=coordinates, weight=3, color=line_color)
+        polyline = PolyLine(locations=coordinates, weight=2, color=line_color)
         polyline.add_to(map)
-
-
-
 
 
 def construct_folium_map(selected_lat, selected_lon, town=None, height=400, zoom_start=12):
     folder_path = "./json"
-   
-  
+
     map = folium.Map(location=[selected_lat, selected_lon], zoom_start=zoom_start)
+    
+    # Create a heart-shaped icon
+    heart_icon = folium.Icon(icon='heart', prefix='fa', color='red')
 
     for filename in os.listdir(folder_path):
         if filename.endswith(".json"):
@@ -42,29 +41,40 @@ def construct_folium_map(selected_lat, selected_lon, town=None, height=400, zoom
             lat = json_data["lat"]
             lon = json_data["lon"]
             city = json_data["city"]
+            favorite = json_data.get('favorite', False)
            
-            color = "red" if selected_lat == lat else "blue" 
+            color = "red" if favorite else "blue" 
 
             if town == city:   
                 if selected_lat == lat:
                     folium.Marker([lat,lon],  
                                   popup=json_data["address"],
                                   tooltip=json_data["address"],
-                                  icon=folium.Icon(color=color), 
+                                  icon=folium.Icon(color='orange'), 
                                   ).add_to(map) 
+                elif favorite:
+                    folium.Marker([lat,lon],  
+                                  popup=json_data["address"],
+                                  tooltip=json_data["address"],
+                                  icon=folium.Icon(icon='heart', color='red'), 
+                                  ).add_to(map)  
                 else:
                     folium.CircleMarker(
                         location=[lat,lon],
                         radius=8,
                         popup=filename,
                         tooltip=json_data["address"],
-                        color="#3186cc",
+                        color=color,
                         fill=True,
                         fill_color="#3186cc",
                     ).add_to(map)
 
-    if town is 'Atlanta':
-      add_stations_to_map(get_marta_stations(), map)
+
+    station_map = "marta_stations_geo.json" if town == 'Atlanta' else "metro_stations_geo.json"
+    with open(station_map, 'r') as f:
+      data = json.load(f)
+ 
+    add_stations_to_map(data, map)
 
     st_folium(map, width='100%', height=height) 
  
@@ -101,4 +111,19 @@ def get_lat_lon_from_address(address):
  
 
 
-print(get_lat_lon_from_address("6000 S Terminal Pkwy, Atlanta, GA 30337"))
+print(get_lat_lon_from_address("Postjesweg, 1057 DT Amsterdam"))
+
+# with open('metro_stations.json', 'r') as f:
+#   data = json.load(f)
+
+# for line in data:
+#   for station in data[line]:
+#     address = data[line][station]
+#     coords = get_lat_lon_from_address(address)
+#     print ('coords', coords)
+#     data[line][station] = coords
+
+# with open('metro_stations_geo.json', 'w') as f:
+#   json.dump(data, f, indent=2)
+
+  

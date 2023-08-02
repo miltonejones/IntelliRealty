@@ -8,6 +8,7 @@ from langchain.chat_models import ChatOpenAI
 from blank import blank_page
 from util import get_document_list, displayPDF, truncate_string, initialize_session, load_source_documents, load_description, load_source_document, save_uploaded_file
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 load_dotenv()
   
@@ -16,8 +17,38 @@ if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
   print("OPENAI_API_KEY is not set")
   exit(1) 
    
+def streamlit_menu(options):
+  displayOptions = [string[:25] for string in options]
+  # 1. as sidebar menu 
+  selected = option_menu(
+    menu_title="",  # required
+    options=displayOptions,  # required 
+    default_index=0,  # optional
+  )
 
+  source_docs = st.session_state.source_docs
+
+  if selected:
+    try:
+        # Find the index of the target string in the array
+        index = displayOptions.index(selected)  
+        st.session_state.pdf_file = source_docs[options[index]]["path"]
+        st.session_state.selected_option = options[index]  
+    
+    except ValueError:
+        st.write(f"'{selected}' not found in the array.")
+
+  # st.write(selected)
+  return selected
  
+def is_favorite(input_string):
+  item = st.session_state.source_docs[input_string]
+  return item['favorite']
+
+def filter_strings_by_source(docs_array):
+  filtered_strings = [string for string in docs_array if is_favorite(string)]
+  return filtered_strings
+
 
 # build and render page sidebar 
 def render_sidebar():
@@ -32,30 +63,44 @@ def render_sidebar():
 
     st.radio('View:',
                 ['Listing', 'Map'],
+                label_visibility="collapsed",
                 horizontal=True,
                 key="view") 
     
     selected_city = st.radio('City:',
                              ['Amsterdam', 'Atlanta'],
-                horizontal=True,
+                              label_visibility="collapsed",
+                              horizontal=True,
                              key="city") 
     
     source_docs = get_document_list(st.session_state.city) 
 
     st.session_state.source_docs = source_docs 
 
+    document_list = list(source_docs.keys())
+
+    try:
+      start_index = document_list.index(st.session_state.selected_option)
+    except ValueError:
+      start_index = 0
+      
+
     # Display radio buttons and handle document selection
-    selected_option = st.selectbox('Listing:', 
-                                list(source_docs.keys()), 
+    selected_option = st.selectbox('Property:', 
+                                document_list, 
                                 key="selected_option_key", 
                                 format_func=truncate_string,
                                 index=0)
- 
+    
+    favorites = filter_strings_by_source(document_list)
+
     # Update session variable on button selection
     if selected_option:
       st.session_state.pdf_file = source_docs[selected_option]["path"]
       st.session_state.selected_option = selected_option  
 
+    # streamlit_menu(favorites)
+    
     with st.expander(":gear: Settings"):
       # Create the slider and update 'llm_temparature' when it's changed
       st.session_state.llm_temparature = st.slider('Set LLM temperature', 0.0, 1.0, step=0.1, value=st.session_state.llm_temparature )

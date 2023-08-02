@@ -1,0 +1,333 @@
+{
+  "green": {
+    "Isolatorweg": {
+      "address": "Isolatorweg, 1014 AS Amsterdam",
+      "lat": 52.395278, 
+      "long": 4.850556
+    },
+    "Sloterdijk": {
+      "address": "Orlyplein, 1043 DT Amsterdam",
+      "lat": 52.3886525,
+      "long": 4.8368023
+    },
+    "De Vlugtlaan": {
+      "address": "Burgemeester Fockstraat, 1063 Amsterdam",
+      "lat": 52.379444, 
+      "long": 4.838056
+    },
+    "Jan van Galenstraat": {
+      "address": "Jan van Galenstraat, 1063 Amsterdam",
+      "lat": 52.3732391,
+      "long": 4.8360575
+    },
+    "Postjesweg": {
+      "address": "Postjesweg, 1057 DT Amsterdam",
+      "lat": 52.364722,
+      "long": 4.833889
+    },
+    "Lelylaan": {
+      "address": "Cornelis Lelylaan, 1067 Amsterdam",
+      "lat": 52.357222,
+      "long":  4.833889
+    },
+    "Heemstedestraat": {
+      "address": "Heemstedestraat, 1066 Amsterdam",
+      "lat": 52.364722, 
+      "long":4.833889
+    },
+    "Henk Sneevlietweg": {
+      "address": "Henk Sneevlietweg, 1067 XX, Amsterdam, Netherlands",
+      "lat": 52.346389,
+      "long": 4.834444
+    },
+
+    "Amstelveenseweg": {
+      "address": "",
+      "lat": 52.338611, 
+      "long": 4.858056
+    },
+
+
+    "Station Zuid": {
+      "address": "Strawinskylaan, 1077 Amsterdam",
+      "lat": 52.34074380000001,
+      "long": 4.873406
+    },
+    "Overamstel": {
+      "address": "Spaklerweg, 1096 Amsterdam",
+      "lat": 52.331389, 
+      "long": 4.916944
+    },
+    "Van der Madeweg": {
+      "address": "Van der Madeweg, 1099 Amsterdam",
+      "lat": 52.3292412,
+      "long": 4.9316858
+    },
+    "Duivendrecht": {
+      "address": "Stationsplein, 1115 Duivendrecht",
+      "lat": 52.3237793,
+      "long": 4.9343686
+    },
+    "Strandvliet": {
+      "address": "Strandvlietpad, 1106 ZS Amsterdam",
+      "lat": 52.318611, 
+      "long": 4.941389
+    },
+    "Bijlmer ArenA": {
+      "address": "ArenA Boulevard, 1101 Amsterdam",
+      "lat": 52.3125401,
+      "long": 4.9441773
+    },
+    "Bullewijk": {
+      "address": "Hogehilweg, 1101 Amsterdam",
+      "lat": 52.3068536,
+      "long": 4.9474855
+    },
+    "Holendrecht": {
+      "address": "Holendrechtplein, 1106 Amsterdam",
+      "lat": 52.2975, 
+      "long": 4.96 
+    },
+    "Reigersbos": {
+      "address": "Reigersbos, 1106 Amsterdam",
+      "lat": 52.2958029,
+      "long": 4.9760097
+    },
+    "Gein": {
+      "address": "Wisseloord, 1107 Amsterdam",
+      "lat": 52.2965873,
+      "long": 4.9865211
+    }
+  },
+  "orange": {
+    "Isolatorweg": {
+      "address": "Isolatorweg, 1014 AS Amsterdam",
+      "lat": 52.395278, 
+      "long": 4.850556
+    },
+    "Sloterdijk": {
+      "address": "Orlyplein, 1043 DT Amsterdam",
+      "lat": 52.3886525,
+      "long": 4.8368023
+    },
+    "De Vlugtlaan": {
+      "address": "Burgemeester Fockstraat, 1063 Amsterdam",
+      "lat": 52.379444, 
+      "long": 4.838056
+    },
+    "Jan van Galenstraat": {
+      "address": "Jan van Galenstraat, 1063 Amsterdam",
+      "lat": 52.3732391,
+      "long": 4.8360575
+    },
+    "Postjesweg": {
+      "address": "Postjesweg, 1057 DT Amsterdam",
+      "lat": 52.364722,
+      "long": 4.833889
+    },
+    "Lelylaan": {
+      "address": "Cornelis Lelylaan, 1067 Amsterdam",
+      "lat": 52.357222,
+      "long":  4.833889
+    },
+    "Heemstedestraat": {
+      "address": "Heemstedestraat, 1066 Amsterdam",
+      "lat": 52.364722, 
+      "long":4.833889
+    },
+    "Henk Sneevlietweg": {
+      "address": "Henk Sneevlietweg, 1067 XX, Amsterdam, Netherlands",
+      "lat": 52.346389, 
+      "long": 4.834444
+    },
+
+    "Amstelveenseweg": {
+      "address": "Henk Sneevlietweg, 1067 XX, Amsterdam, Netherlands",
+      "lat": 52.338611, 
+      "long": 4.858056
+    },
+
+
+
+    "Station Zuid": {
+      "address": "Strawinskylaan, 1077 Amsterdam",
+      "lat": 52.34074380000001,
+      "long": 4.873406
+    },
+    
+
+    "Overamstel": {
+      "address": "Spaklerweg, 1096 Amsterdam",
+      "lat": 52.331389, 
+      "long": 4.916944
+    },
+    "Spaklerweg": {
+      "address": "Spaklerweg, 1114 Amsterdam",
+      "lat": 52.3346647,
+      "long": 4.9231875
+    },
+    "Amstelstation": {
+      "address": "Julianaplein, 1097 Amsterdam",
+      "lat": 52.3467549,
+      "long": 4.9192554
+    },
+    "Wibautstraat": {
+      "address": "Wibautstraat, 1091 Amsterdam",
+      "lat": 52.3539728,
+      "long": 4.912455
+    },
+    "Weesperplein": {
+      "address": "Weesperplein, 1018 Amsterdam",
+      "lat": 52.3617446,
+      "long": 4.907735
+    },
+    "Waterlooplein": {
+      "address": "Waterlooplein, 1011 Amsterdam",
+      "lat": 52.3677503,
+      "long": 4.9027389
+    },
+
+
+    "Nieuwmarkt": {
+      "address": "Nieuwmarkt, 1011 Amsterdam",
+      "lat": 52.3725884,
+      "long": 4.899863
+    },
+
+
+    "Central Station": {
+      "address": "Stationsplein, 1012 AB Amsterdam",
+      "lat": 52.3787257,
+      "long": 4.8989942
+    }
+    
+  },
+  "blue": {
+    "Noord": {
+      "address": "Johan van Hasseltweg, 1021 Amsterdam",
+      "lat": 52.401667, 
+      "long": 4.932222
+    },
+    "Noorderpark": {
+      "address": "Noorderparklaan, 1031 Amsterdam",
+      "lat": 52.389167, 
+      "long": 4.919167
+    },
+    "Centraal Station": {
+      "address": "Stationsplein, 1012 AB Amsterdam",
+      "lat": 52.3787257,
+      "long": 4.8989942
+    },
+    "Rokin": {
+      "address": "Rokin, 1012 Amsterdam",
+      "lat": 52.3701072,
+      "long": 4.892809
+    },
+    "Vijzelgracht": {
+      "address": "Vijzelgracht, 1017 Amsterdam",
+      "lat": 52.3609224,
+      "long": 4.8910187
+    },
+    "De Pijp": {
+      "address": "Ceintuurbaan, 1072 Amsterdam",
+      "lat": 52.3531559,
+      "long": 4.8935089
+    },
+    "Europaplein": {
+      "address": "Europaplein, 1078 Amsterdam",
+      "lat": 52.342455,
+      "long": 4.8920308
+    },
+    "Zuid": {
+      "address": "Strawinskylaan, 1077 Amsterdam",
+      "lat": 52.34074380000001,
+      "long": 4.873406
+    }
+  },
+  "gray": {
+
+
+    "Sloterdijk": {
+      "address": "Orlyplein, 1043 DT Amsterdam",
+      "lat": 52.3886525,
+      "long": 4.8368023
+    },
+
+    "Central Station": {
+      "address": "Stationsplein, 1012 AB Amsterdam",
+      "lat": 52.3787257,
+      "long": 4.8989942
+    },
+    
+    "Muiderpoort": {
+      "address": "",
+      "lat": 52.360833, 
+      "long": 4.931111
+    },
+    "Science Park": {
+     
+      "address": "",
+      "lat": 52.3525, 
+      "long": 4.948611
+    },
+    "Diemen": {
+     
+      "address": "",
+      "lat":  52.345278, 
+      "long":  4.966944
+    },
+    "Duivendrecht": {
+      "address": "Stationsplein, 1115 Duivendrecht",
+      "lat": 52.3237793,
+      "long": 4.9343686
+    },
+    "Station Zuid": {
+      "address": "Strawinskylaan, 1077 Amsterdam",
+      "lat": 52.34074380000001,
+      "long": 4.873406
+    },
+    "Schiphol": {
+      "address": "",
+      "lat": 52.308056,
+      "long": 4.764167
+    },
+    "Sloterdijk - Home": {
+      "address": "Orlyplein, 1043 DT Amsterdam",
+      "lat": 52.3886525,
+      "long": 4.8368023
+    }
+  },
+  "red": {
+
+    "Spaklerweg": {
+      "address": "Spaklerweg, 1114 Amsterdam",
+      "lat": 52.3346647,
+      "long": 4.9231875
+    },
+    "Van der Madeweg": {
+      "address": "Van der Madeweg, 1099 Amsterdam",
+      "lat": 52.3292412,
+      "long": 4.9316858
+    },
+    "Venserpolder": {
+      "address": "Venserpolder Metro Station, Amsterdam",
+      "lat": 52.326667, 
+      "long": 4.946667
+    },
+    "Diemen Zuid": {
+      "address": "",
+      "lat": 52.330278, 
+      "long": 4.956389
+    },
+    "Verrijn Stuartweg": {
+      "address": "",
+      "lat": 52.328333, 
+      "long": 4.967222
+    },
+    "Gaasperplas": {
+      "address": "",
+      "lat": 52.311111, 
+      "long": 4.984444
+    }
+  }
+}
