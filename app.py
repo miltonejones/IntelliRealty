@@ -7,8 +7,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.chat_models import ChatOpenAI
 from blank import blank_page
 from util import get_document_list, displayPDF, truncate_string, initialize_session, load_source_documents, load_description, load_source_document, save_uploaded_file
-import streamlit as st
-from streamlit_option_menu import option_menu
+import streamlit as st 
 
 load_dotenv()
   
@@ -16,31 +15,7 @@ load_dotenv()
 if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
   print("OPENAI_API_KEY is not set")
   exit(1) 
-   
-def streamlit_menu(options):
-  displayOptions = [string[:25] for string in options]
-  # 1. as sidebar menu 
-  selected = option_menu(
-    menu_title="",  # required
-    options=displayOptions,  # required 
-    default_index=0,  # optional
-  )
-
-  source_docs = st.session_state.source_docs
-
-  if selected:
-    try:
-        # Find the index of the target string in the array
-        index = displayOptions.index(selected)  
-        st.session_state.pdf_file = source_docs[options[index]]["path"]
-        st.session_state.selected_option = options[index]  
     
-    except ValueError:
-        st.write(f"'{selected}' not found in the array.")
-
-  # st.write(selected)
-  return selected
- 
 def is_favorite(input_string):
   item = st.session_state.source_docs[input_string]
   return item['favorite']
@@ -98,8 +73,7 @@ def render_sidebar():
     if selected_option:
       st.session_state.pdf_file = source_docs[selected_option]["path"]
       st.session_state.selected_option = selected_option  
-
-    # streamlit_menu(favorites)
+ 
     
     with st.expander(":gear: Settings"):
       # Create the slider and update 'llm_temparature' when it's changed
