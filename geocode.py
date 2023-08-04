@@ -10,19 +10,27 @@ from folium import Map, PolyLine
 def add_stations_to_map(stations, map):
    for line_color, station_info in stations.items():
         coordinates = []
+        
         for name, coords in station_info.items():
             coordinates.append((coords['lat'], coords['long']))
+
+        polyline1 = PolyLine(locations=coordinates, weight=6, color='gray')
+        polyline2 = PolyLine(locations=coordinates, weight=4, color=line_color)
+
+        polyline1.add_to(map)
+        polyline2.add_to(map)
+
+        for name, coords in station_info.items():
+
             folium.CircleMarker(
                 location=[coords['lat'], coords['long']],
-                radius=4,
+                radius=6,
                 color=line_color,
                 fill=True,
                 popup=f'{name} Station',
                 tooltip=f'{name} Station'
             ).add_to(map)
 
-        polyline = PolyLine(locations=coordinates, weight=2, color=line_color)
-        polyline.add_to(map)
 
 
 def construct_folium_map(selected_lat, selected_lon, town=None, height=400, zoom_start=12):

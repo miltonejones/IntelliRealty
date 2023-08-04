@@ -1,0 +1,37 @@
+{
+    "title": "Charming Condo in Poncey-Highland",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/p/ga/atlanta/616-n-highland-ave-ne-3a-atlanta-ga-30306--2030454806",
+    "address": "616 N Highland Ave NE #3A, Atlanta, GA 30306",
+    "description": "This charming condo is located in the desirable neighborhood of Poncey-Highland in Atlanta. It features a sunlit living room, a large sunroom with views of N. Highland, hardwood floors, and a spacious bedroom. The location is unbeatable, just steps away from Ponce City Market, the Beltline, Little Five Points, and Virginia-Highland. This pet-friendly property allows dogs under 25lbs with a pet deposit.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 665,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Contact the property manager to schedule a viewing.",
+        "externalStorage": "No external storage available.",
+        "garage": "No garage available.",
+        "deliveryDate": "Not applicable."
+    },
+    "rentalDetails": {
+        "rentPrice": "$2,145/mo",
+        "securityDeposit": "Contact the property manager for information about the security deposit.",
+        "rentalAgreement": "Contact the property manager for information about the rental agreement.",
+        "availableSince": "Not applicable.",
+        "status": "Not currently available for rent.",
+        "acceptance": "Contact the property manager for information about the acceptance process.",
+        "rentOptions": [
+            {
+                "size": 665,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$2,145/mo",
+                "availableWhen": "Not applicable."
+            }
+        ]
+    },
+    "neighbourhood": "Poncey-Highland",
+    "lat": 33.7713138,
+    "lon": -84.35292079999999
+}

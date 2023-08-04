@@ -1,0 +1,38 @@
+{
+    "title": "616 N Highland Ave NE #14B",
+    "city": "Atlanta",
+    "url": "https://www.trulia.com/p/ga/atlanta/616-n-highland-ave-ne-14b-atlanta-ga-30306--1012573422",
+    "address": "616 N Highland Ave NE #14B, Atlanta, GA 30306",
+    "description": "Amazing Location - Natural Light filled corner unit- With porch. This corner unit has Concrete floors - Granite Counter tops - Stainless Steel Appliances - New Washer Dryer - Exposed Brick. Walk to all the bars and restaurants Virginia Highlands has to offer! Gated parking, secure building located near PCM, Beltline, VA-HI, Freedom Park. Walk to great restaurants, bars, shops & Saturday Market.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 740,
+    "sizeType": "sqft",
+    "importantInformation": {
+        "viewings": "Please call today to schedule a viewing.",
+        "externalStorage": "Not specified",
+        "garage": "Gated parking available",
+        "deliveryDate": "Not specified"
+    },
+    "rentalDetails": {
+        "rentPrice": "$1,600/mo",
+        "securityDeposit": "Not specified",
+        "rentalAgreement": "Not specified",
+        "availableSince": "Listed for rent on Jul 19, 2023",
+        "status": "Not specified",
+        "acceptance": "Not specified",
+        "rentOptions": [
+            {
+                "size": 740,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "$1,600/mo",
+                "availableWhen": "Not specified"
+            }
+        ]
+    },
+    "neighbourhood": "Poncey-Highland",
+    "lat": 33.7713138,
+    "lon": -84.35292079999999,
+    "favorite": true
+}
