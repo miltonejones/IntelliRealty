@@ -1,0 +1,37 @@
+{
+    "title": "Apartment for Rent",
+    "city": "Rotterdam",
+    "url": "https://www.funda.nl/huur/rotterdam/appartement-88583419-tandwielstraat-149/",
+    "address": "Tandwielstraat 149, 3083 AV Rotterdam",
+    "description": "This 1-bedroom apartment is located in the Vreewijk neighborhood of Rotterdam. It offers a convenient location with nearby amenities such as schools, supermarkets, and bus stops. The apartment is part of the Startmotor project and is available for a minimum rental period of 1 year. The rent price is \u20ac755 per month (excluding service costs of \u20ac212 per month). The apartment is 31m\u00b2 in size and is available for immediate occupancy. The security deposit is \u20ac1,000. For more information and to schedule viewings, please visit the provided link.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 31,
+    "sizeType": "sqm",
+    "importantInformation": {
+        "viewings": "Viewings can be scheduled through the provided link.",
+        "externalStorage": "External storage is not mentioned.",
+        "garage": "Garage is not mentioned.",
+        "deliveryDate": "Immediate occupancy"
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac755 per month (excluding service costs of \u20ac212 per month)",
+        "securityDeposit": "\u20ac1,000",
+        "rentalAgreement": "Onbepaalde tijd",
+        "availableSince": "Available for 2 months",
+        "status": "Available",
+        "acceptance": "Per direct beschikbaar",
+        "rentOptions": [
+            {
+                "size": 31,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "\u20ac755 per month (excluding service costs)",
+                "availableWhen": "Immediate occupancy"
+            }
+        ]
+    },
+    "neighbourhood": "Vreewijk",
+    "lat": 51.8865868,
+    "lon": 4.4967967
+}

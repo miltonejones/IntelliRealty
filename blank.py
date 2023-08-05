@@ -153,7 +153,7 @@ def blank_page():
     
     if st.session_state.view  is 'Map':
       st.write(obj["address"])
-      construct_folium_map(info["lat"], info["lon"], st.session_state.city, 768, 13)
+      construct_folium_map(info["lat"], info["lon"], st.session_state.city, 1024, 13)
     else:   
       col1, col2 = st.columns(2)
 

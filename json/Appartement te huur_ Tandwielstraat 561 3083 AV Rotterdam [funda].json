@@ -1,0 +1,37 @@
+{
+    "title": "Apartment for Rent: Tandwielstraat 561, Rotterdam",
+    "city": "Rotterdam",
+    "url": "https://www.funda.nl/huur/rotterdam/appartement-88504492-tandwielstraat-561/",
+    "address": "Tandwielstraat 561, 3083 AV Rotterdam",
+    "description": "This 25 sqm apartment is located in the Vreewijk neighborhood of Rotterdam. It is part of the Startmotor project and offers a comfortable living space. The apartment has 1 bedroom and 1 bathroom. It is suitable for individuals between the ages of 18 and 27. The rent price is \u20ac695 per month, with a security deposit of \u20ac1,000. The rental agreement is indefinite. The apartment has been available for rent for 7 weeks. The neighborhood offers easy access to schools, supermarkets, and public transportation.",
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "size": 25,
+    "sizeType": "sqm",
+    "importantInformation": {
+        "viewings": "Viewings can be arranged upon request.",
+        "externalStorage": "External storage options are available.",
+        "garage": "There is no garage available.",
+        "deliveryDate": "The apartment is available for immediate move-in."
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac695 per month (excluding service costs of \u20ac212 per month)",
+        "securityDeposit": "\u20ac1,000 one-time payment",
+        "rentalAgreement": "Indefinite",
+        "availableSince": "7 weeks",
+        "status": "Available",
+        "acceptance": "To be determined",
+        "rentOptions": [
+            {
+                "size": 25,
+                "bedroomCount": 1,
+                "bathroomCount": 1,
+                "price": "\u20ac695 per month",
+                "availableWhen": "Immediate"
+            }
+        ]
+    },
+    "neighbourhood": "Vreewijk",
+    "lat": 51.8861364,
+    "lon": 4.4960609
+}

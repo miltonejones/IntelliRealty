@@ -1,0 +1,447 @@
+{
+  "orange": {
+
+    "Hoek van Holland Strand": {
+      "lat": "51.986111",
+      "long": "4.106667"
+  },
+  "Hoek van Holland Haven": {
+      "lat": 51.978056, 
+      "long": 4.128333
+  },
+  "Steendijkpolder": {
+      "lat": 51.9334025,
+      "long": 4.2252466
+  },
+  "Maassluis West": {
+      "lat": "51.925556",
+      "long": "4.236111"
+  },
+  "Maassluis Centrum": {
+      "lat": "51.918056",
+      "long": "4.253611"
+  },
+
+
+  
+  "Vlaardingen West": {
+      "lat": "51.903889",
+      "long": "4.314167"
+  },
+  "Vlaardingen Centrum": {
+      "lat": "51.903056",
+      "long": "4.344444"
+  },
+  "Vlaardingen Oost": {
+      "lat": "51.910278",
+      "long": "4.361944"
+  },
+  "Schiedam Nieuwland": {
+      "lat": "51.922222",
+      "long": "4.382778"
+  },
+
+
+  "Schiedam Centrum": {
+      "lat": "51.921944",
+      "long": "4.41"
+  },
+  "Marconiplein": {
+      "lat": "51.9133",
+      "long": "4.43275"
+  },
+
+  "Delfshaven": {
+    "lat": "51.91",
+    "long": "4.445556"
+},
+"Coolhaven": {
+    "lat": "51.909722",
+    "long": "4.458056"
+},
+"Dijkzigt": {
+    "lat": "51.912222",
+    "long": "4.466111"
+},
+"Eendrachtsplein": {
+    "lat": "51.916389",
+    "long": "4.473611"
+},
+"Beurs": {
+    "lat": "51.918611",
+    "long": "4.480556"
+},
+"Blaak": {
+    "lat": "51.92",
+    "long": "4.489167"
+},
+"Oostplein": {
+    "lat": "51.923056",
+    "long": "4.496944"
+},
+"Gerdesiaweg": {
+    "lat": "51.925833",
+    "long": "4.506111"
+}, 
+"Voorschoterlaan": {
+    "lat": "51.925",
+    "long": "4.513056"
+},
+"Kralingse Zoom": {
+    "lat": "51.921472",
+    "long": "4.533764"
+} ,
+ 
+"Capelsebrug": {
+    "lat": 51.9213185,
+    "long": 4.558189
+},
+
+
+   
+"Schenkel": {
+  "lat": "51.931944",
+  "long": "4.563611"
+},
+
+    
+"Prinsenlaan": {
+  "lat": "51.940833",
+  "long": "4.556667"
+},
+"Oosterflank": {
+  "lat": "51.945833",
+  "long": "4.554444"
+},
+"Alexander": {
+  "lat": "51.951944",
+  "long": "4.552778"
+},
+"Graskruid": {
+  "lat": "51.957222",
+  "long": "4.549444"
+},
+
+
+"Hesseplaats": {
+  "lat": "51.963056",
+  "long": "4.552222"
+},
+"Nieuw Verlaat": {
+  "lat": "51.964861",
+  "long": "4.561944"
+},
+"Ambachtsland": {
+  "lat": "51.965833",
+  "long": "4.570278"
+}, 
+"De Tochten": {
+  "lat": "51.968714",
+  "long": "4.578144"
+}, 
+"Nesselande": {
+  "lat": "51.979056",
+  "long": "4.586528"
+}
+
+
+  },
+  "blue": {
+    "Den Haag Centraal": {
+        "lat": "52.081667",
+        "long": "4.329167"
+    },
+    "Laan van NOI": {
+        "lat": "52.078889",
+        "long": "4.343056"
+    },
+    "Voorburg 't Loo": {
+        "lat": "52.082222",
+        "long": "4.366389"
+    },
+    "Leidschendam-Voorburg": {
+        "lat": "52.076944",
+        "long": "4.382778"
+    },
+    "Forepark": {
+        "lat": "52.07",
+        "long": "4.3925"
+    },
+    "Leidschenveen": {
+        "lat": "52.064722",
+        "long": "4.4"
+    },
+    "Nootdorp": {
+        "lat": "52.047778",
+        "long": "4.414444"
+    },
+    "Pijnacker Centrum": {
+        "lat": "52.020278",
+        "long": "4.437778"
+    },
+    "Pijnacker Zuid": {
+        "lat": "52.004722",
+        "long": "4.446389"
+    },
+    "Berkel Westpolder": {
+        "lat": "51.989444",
+        "long": "4.455"
+    },
+    "Rodenrijs": {
+        "lat": "51.976111",
+        "long": "4.460833"
+    },
+    "Meijersplein / Airport": {
+        "lat": "51.956111",
+        "long": "4.462222"
+    },
+    "Melanchthonweg": {
+        "lat": "51.948611",
+        "long": "4.464444"
+    },
+    "Blijdorp": {
+        "lat": "51.930833",
+        "long": "4.457778"
+    },
+    "Rotterdam Centraal": {
+        "lat": "51.924444",
+        "long": "4.469444"
+    },
+    "Stadhuis": {
+        "lat": "51.923333",
+        "long": "4.478333"
+    },
+    "Leuvehaven": {
+        "lat": "51.913889",
+        "long": "4.482778"
+    },
+    "Wilhelminaplein": {
+        "lat": "51.907222",
+        "long": "4.493889"
+    },
+    "Rijnhaven": {
+        "lat": "51.903889",
+        "long": "4.496944"
+    },
+    "Maashaven": {
+        "lat": "51.897222",
+        "long": "4.494722"
+    },
+    "Zuidplein": {
+        "lat": "51.886944",
+        "long": "4.488611"
+    },
+    "Slinge": {
+        "lat": "51.874664",
+        "long": "4.477767"
+    }
+
+
+
+},
+
+"green": {
+
+
+
+
+
+  "Binnenhof": {
+    "lat": "51.960278",
+    "long": "4.535833"
+  },
+  "Romeynshof": {
+      "lat": "51.961667",
+      "long": "4.542778"
+  },
+
+  "Graskruid": {
+    "lat": "51.957222",
+    "long": "4.549444"
+}
+
+
+},
+    
+
+"red": {
+
+  "De Terp": {
+    "lat": "51.935964",
+    "long": "4.600472"
+}, 
+"Capelle Centrum": {
+    "lat": "51.9314",
+    "long": "4.589689"
+},
+
+  "Slotlaan": {
+    "lat": "51.928503",
+    "long": "4.578483"
+},
+
+"Capelsebrug": {
+  "lat": 51.9213185,
+  "long": 4.558189
+},
+
+"Kralingse Zoom": {
+  "lat": "51.921472",
+  "long": "4.533764"
+} ,
+
+"Voorschoterlaan": {
+  "lat": "51.925",
+  "long": "4.513056"
+},
+"Gerdesiaweg": {
+  "lat": "51.925833",
+  "long": "4.506111"
+}, 
+"Oostplein": {
+  "lat": "51.923056",
+  "long": "4.496944"
+},
+"Blaak": {
+  "lat": "51.92",
+  "long": "4.489167"
+},
+"Beurs": {
+  "lat": "51.918611",
+  "long": "4.480556"
+},
+
+"Eendrachtsplein": {
+    "lat": "51.916389",
+    "long": "4.473611"
+},
+"Dijkzigt": {
+    "lat": "51.912222",
+    "long": "4.466111"
+},
+
+"Coolhaven": {
+  "lat": "51.909722",
+  "long": "4.458056"
+},
+
+"Delfshaven": {
+  "lat": "51.91",
+  "long": "4.445556"
+},
+  "Marconiplein": {
+      "lat": "51.9133",
+      "long": "4.43275"
+  },
+
+  "Schiedam Centrum": {
+    "lat": "51.921944",
+    "long": "4.41"
+},
+
+  "Parkweg": {
+    "lat": "51.921442",
+    "long": "4.394425"
+},
+"Troelstralaan": {
+    "lat": "51.915278",
+    "long": "4.384167"
+},
+
+
+
+"Vijfsluizen": {
+    "lat": "51.908889",
+    "long": "4.371944"
+},
+
+"Pernis": {
+    "lat": "51.885",
+    "long": "4.381944"
+},
+
+
+  "Tussenwater": {
+    "lat": "51.862756",
+    "long": "4.376458"
+},
+"Hoogvliet": {
+    "lat": "51.860556",
+    "long": "4.366667"
+},
+"Zalmplaat": {
+    "lat": "51.855278",
+    "long": "4.362778"
+},
+"Spijkenisse Centrum": {
+    "lat": "51.846389",
+    "long": "4.334444"
+},
+"Heemraadlaan": {
+    "lat": "51.837778",
+    "long": "4.331667"
+},
+
+"De Akkers": {
+  "lat": "51.833333",
+  "long": "4.319722"
+}
+
+
+
+
+},
+
+"cyan": {
+ 
+  "Slinge": {
+    "lat": "51.874664",
+    "long": "4.477767"
+},
+
+"Rhoon": {
+  "lat": "51.859167",
+  "long": "4.419167"
+},
+
+"Poortugaal": {
+  "lat": "51.861667",
+  "long": "4.395833"
+},
+
+
+"Tussenwater": {
+  "lat": "51.862756",
+  "long": "4.376458"
+},
+
+"Hoogvliet": {
+  "lat": "51.860556",
+  "long": "4.366667"
+},
+"Zalmplaat": {
+  "lat": "51.855278",
+  "long": "4.362778"
+},
+"Spijkenisse Centrum": {
+  "lat": "51.846389",
+  "long": "4.334444"
+},
+"Heemraadlaan": {
+  "lat": "51.837778",
+  "long": "4.331667"
+},
+
+
+"De Akkers": {
+  "lat": "51.833333",
+  "long": "4.319722"
+}
+
+
+
+}
+
+
+
+}

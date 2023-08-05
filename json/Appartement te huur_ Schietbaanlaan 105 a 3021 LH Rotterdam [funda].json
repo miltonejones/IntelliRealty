@@ -1,0 +1,37 @@
+{
+    "title": "Apartment for rent: Schietbaanlaan 105 a",
+    "city": "Rotterdam",
+    "url": "https://www.funda.nl/huur/rotterdam/appartement-88613418-schietbaanlaan-105-a/",
+    "address": "Schietbaanlaan 105 a, 3021 LH Rotterdam",
+    "description": "Immobilia proudly presents a bright and playful apartment with 3 bedrooms. The apartment has recently been partially renovated, including a new bathroom, separate toilet, and new laminate flooring. Located on the first and second floor of a beautiful stately building in Rotterdam-West. A lively area with various restaurants and amenities.",
+    "bedroomCount": 3,
+    "bathroomCount": 1,
+    "size": 98,
+    "sizeType": "sqm",
+    "importantInformation": {
+        "viewings": "Viewings are available upon request.",
+        "externalStorage": "External storage is not available.",
+        "garage": "There is no garage available.",
+        "deliveryDate": "The apartment is available for immediate occupancy."
+    },
+    "rentalDetails": {
+        "rentPrice": "\u20ac1,695 per month (excluding service costs)",
+        "securityDeposit": "\u20ac3,390",
+        "rentalAgreement": "Temporary rental",
+        "availableSince": "6 weeks ago",
+        "status": "Available",
+        "acceptance": "Immediate availability",
+        "rentOptions": [
+            {
+                "size": 98,
+                "bedroomCount": 3,
+                "bathroomCount": 1,
+                "price": "\u20ac1,695 per month",
+                "availableWhen": "Immediate"
+            }
+        ]
+    },
+    "neighbourhood": "Middelland, Rotterdam",
+    "lat": 51.91578999999999,
+    "lon": 4.4562745
+}

@@ -42,11 +42,9 @@ def render_sidebar():
                 horizontal=True,
                 key="view") 
     
-    selected_city = st.radio('City:',
-                             ['Amsterdam', 'Atlanta'],
-                              label_visibility="collapsed",
-                              horizontal=True,
-                             key="city") 
+    st.selectbox('City:',
+                ['Amsterdam', 'Atlanta', 'Rotterdam'],  
+                key="city") 
     
     source_docs = get_document_list(st.session_state.city) 
 

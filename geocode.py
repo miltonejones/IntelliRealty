@@ -8,28 +8,29 @@ from streamlit_folium import st_folium
 from folium import Map, PolyLine
 
 def add_stations_to_map(stations, map):
-   for line_color, station_info in stations.items():
-        coordinates = []
-        
-        for name, coords in station_info.items():
-            coordinates.append((coords['lat'], coords['long']))
+  for line_color, station_info in stations.items():
+    coordinates = [] 
+    for name, coords in station_info.items():
+      coordinates.append((float(coords['lat']), float(coords['long'])))
+    
+    # print (coordinates)
 
-        polyline1 = PolyLine(locations=coordinates, weight=6, color='gray')
-        polyline2 = PolyLine(locations=coordinates, weight=4, color=line_color)
+    polyline1 = PolyLine(locations=coordinates, weight=6, color='gray')
+    polyline2 = PolyLine(locations=coordinates, weight=4, color=line_color)
 
-        polyline1.add_to(map)
-        polyline2.add_to(map)
+    polyline1.add_to(map)
+    polyline2.add_to(map)
 
-        for name, coords in station_info.items():
+    for name, coords in station_info.items():
 
-            folium.CircleMarker(
-                location=[coords['lat'], coords['long']],
-                radius=6,
-                color=line_color,
-                fill=True,
-                popup=f'{name} Station',
-                tooltip=f'{name} Station'
-            ).add_to(map)
+        folium.CircleMarker(
+            location=[coords['lat'], coords['long']],
+            radius=6,
+            color=line_color,
+            fill=True,
+            popup=f'{name} Station',
+            tooltip=f'{name} Station'
+        ).add_to(map)
 
 
 
@@ -56,14 +57,14 @@ def construct_folium_map(selected_lat, selected_lon, town=None, height=400, zoom
             if town == city:   
                 if selected_lat == lat:
                     folium.Marker([lat,lon],  
-                                  popup=json_data["address"],
-                                  tooltip=json_data["address"],
+                                  popup=json_data.get('address', 'unknown'),
+                                  tooltip=json_data.get('address', 'unknown'),
                                   icon=folium.Icon(color='orange'), 
                                   ).add_to(map) 
                 elif favorite:
                     folium.Marker([lat,lon],  
-                                  popup=json_data["address"],
-                                  tooltip=json_data["address"],
+                                  popup=json_data.get('address', 'unknown'),
+                                  tooltip=json_data.get('address', 'unknown'),
                                   icon=folium.Icon(icon='heart', color='red'), 
                                   ).add_to(map)  
                 else:
@@ -71,14 +72,21 @@ def construct_folium_map(selected_lat, selected_lon, town=None, height=400, zoom
                         location=[lat,lon],
                         radius=8,
                         popup=filename,
-                        tooltip=json_data["address"],
+                        tooltip=json_data.get('address', 'unknown'),
                         color=color,
                         fill=True,
                         fill_color="#3186cc",
                     ).add_to(map)
 
 
-    station_map = "marta_stations_geo.json" if town == 'Atlanta' else "metro_stations_geo.json"
+    maps = {
+      'Atlanta': 'marta_stations_geo.json',
+      'Amsterdam': 'metro_stations_geo.json',
+      'Rotterdam': 'rotterdam_stations_geo.json',
+    }
+
+    # station_map = "marta_stations_geo.json" if town == 'Atlanta' else "metro_stations_geo.json"
+    station_map = maps[town] # 'rotterdam_stations_geo.json'
     with open(station_map, 'r') as f:
       data = json.load(f)
  
@@ -119,7 +127,7 @@ def get_lat_lon_from_address(address):
  
 
 
-print(get_lat_lon_from_address("Postjesweg, 1057 DT Amsterdam"))
+print(get_lat_lon_from_address("3145 GM Maassluis, Netherlands"))
 
 # with open('metro_stations.json', 'r') as f:
 #   data = json.load(f)
